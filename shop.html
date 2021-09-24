@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <title>Basket</title>
+</head>
+
+<body>
+
+<header>
+    <div class="content">
+        <a class="logo" href="/main.html">
+            <img alt="Logo" src="img/logo.png">
+        </a>
+        <ul class="header-menu">
+            <li class="item-menu"><a href="">Home</a></li>
+            <li class="item-menu"><a href="">Services</a></li>
+            <li class="item-menu"><a href="">FAQ</a></li>
+            <li class="item-menu"><a href="">Contact Us</a></li>
+        </ul>
+        <div class="header-menu-user">
+            <div class="menu-user-item">
+                <img alt="" src="img/icon/user.png">
+                <p>My Account</p>
+            </div>
+            <div class="menu-user-item">
+                <img alt="" src="img/icon/basket.png">
+                <p>My Cart</p>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class=content_block>
+        <div class=container>
+            <div class=title_lk>
+                <h4>
+my shopping cart
+</h4> </div>
+        </div>
+    </div>
+
+        <div class="shop__cart">
+            <div class=delivery__cart>
+                <div class="delivery__time">
+                    <h2>delivery time</h2>
+                    <div class="asap__btn">
+                        <button class="btn_asap">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg width="19px" height="19px" fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <circle cx="386" cy="210" r="20" />
+                                                <path d="M432,40h-26V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v20h-91V20c0-11.046-8.954-20-20-20
+                c-11.046,0-20,8.954-20,20v20h-90V20c0-11.046-8.954-20-20-20s-20,8.954-20,20v20H80C35.888,40,0,75.888,0,120v312
+                c0,44.112,35.888,80,80,80h153c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20H80c-22.056,0-40-17.944-40-40V120
+                c0-22.056,17.944-40,40-40h25v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h90v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h91
+                v20c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V80h26c22.056,0,40,17.944,40,40v114c0,11.046,8.954,20,20,20
+                c11.046,0,20-8.954,20-20V120C512,75.888,476.112,40,432,40z" />
+                                                <path d="M391,270c-66.72,0-121,54.28-121,121s54.28,121,121,121s121-54.28,121-121S457.72,270,391,270z M391,472
+                c-44.663,0-81-36.336-81-81s36.337-81,81-81c44.663,0,81,36.336,81,81S435.663,472,391,472z" />
+                                                <path d="M420,371h-9v-21c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v41c0,11.046,8.954,20,20,20h29
+                c11.046,0,20-8.954,20-20C440,379.954,431.046,371,420,371z" />
+                                                <circle cx="299" cy="210" r="20" />
+                                                <circle cx="212" cy="297" r="20" />
+                                                <circle cx="125" cy="210" r="20" />
+                                                <circle cx="125" cy="297" r="20" />
+                                                <circle cx="125" cy="384" r="20" />
+                                                <circle cx="212" cy="384" r="20" />
+                                                <circle cx="212" cy="210" r="20" /> </g>
+                                        </g>
+                                    </g>
+                                </svg> asap (40 - 50 min)</button>
+                    </div>
+                </div>
+                <div class="delivery__address">
+                    <h2>delivery address</h2>
+                    <div class="delivery__radio">
+                        <input type="radio" id="r1" name="rr" />
+                        <label for="r1"><span></span> </label>15th Avenue,15 floor</div>
+                    <div class="delivery__radio">
+                        <input type="radio" id="r2" name="rr" />
+                        <label for="r2"><span></span> </label>15th Avenue,16 floor</div>
+                    <button class="btn_add__address"> <img src=img/icon/plus.png alt>add address</button>
+                    <div class="popup-fade"></div>
+                    <div class="add__address">
+                        <div class="cross__delivery">
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                <svg width="16px" height="16px" fill="#65c6bb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                    </g>
+                                </svg>
+                        </div>
+                        <h2 class="title__cart">add address</h2>
+                        <form action="">
+                            <div class="input_cart">
+                                <label>Street</label>
+                                <input type="text" class="input__form" placeholder="Jafferson Ave"> </div>
+                            <div class="address__map"> </div>
+                            <div class="input_cart">
+                                <label>name on card</label>
+                                <input type="text" class="input__form" placeholder="Name"> </div>
+                            <div class="address__info">
+                                <div class="input_cart">
+                                    <label>house</label>
+                                    <input type="mail" class="input__form__house" placeholder="25"> </div>
+                                <div class="input_cart">
+                                    <label>floor</label>
+                                    <input type="mail" class="input__form__house" placeholder="10"> </div>
+                                <div class="input_cart">
+                                    <label>apartment</label>
+                                    <input type="mail" class="input__form__house" placeholder="57"> </div>
+                            </div>
+                            <div class="comment_block__address">
+                                <p>additional information</p>
+                                <textarea id="comment__address" name="comment" rows="5" cols="33">Your comment</textarea>
+                            </div>
+                        </form>
+                        <div class="accept__settings__shop">
+                            <button class="btn_accept"> Save changes </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery__method">
+                    <h2>payment method</h2>
+                    <div class="delivery__radio">
+                        <input type="radio" id="cash" name="mt" />
+                        <label for="cash"><span></span> </label>Cash</div>
+                    <div class="delivery__radio">
+                        <input type="radio" id="ccard" name="mt" />
+                        <label for="ccard"><span></span> </label>Credit card <span>4565XXXX8998</span> </div>
+                    <div class="new__cart">
+                        <button class="btn__cart">Add new credit card</button>
+                    </div>
+                </div>
+                <div class="popup-fade"></div>
+                <div class="add__cart">
+                    <div class="cross__delivery">
+                        <svg width="16px" height="16px" fill="#65c6bb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h2 class="title__cart">add credit card</h2>
+                    <form action="">
+                        <div class="input_cart">
+                            <label>card number</label>
+                            <input type="text" class="input__form" placeholder="1111 2222 3333 4444"> </div>
+                        <div class="cart__info">
+                            <div class="input_cart">
+                                <label>expiry day</label>
+                                <input type="mail" class="input__form__month" placeholder="Month">
+                                <input type="mail" class="input__form__year" placeholder="Year"> </div>
+                            <div class="input_cart">
+                                <label>cvv</label>
+                                <input type="mail" class="input__form__cvv" placeholder="***"> </div>
+                        </div>
+                    </form>
+                    <div class="accept__settings__shop">
+                        <button class="btn_accept"> Save changes </button>
+                    </div>
+                </div>
+            </div>
+            <div class="basket">
+                <div class="backet__order">
+                    <div class="img__food"> <img src=img/carbonara.jpg alt> </div>
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="img__food"> <img src=img/carbonara.jpg alt> </div>
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                                <div class="modifications">
+                                    <h2>well done</h2>
+                                    <h3>Tabasco<span> + €3.00</span></h3> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modifications__med">
+                            <h2>well done</h2>
+                            <h3>Tabasco<span> + €3.00</span></h3> </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="img__food"> <img src=img/carbonara.jpg alt> </div>
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                                <div class="modifications">
+                                    <h2>well done</h2>
+                                    <h3>Tabasco <span>+ €3.00</span></h3> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modifications__med">
+                            <h2>well done</h2>
+                            <h3>Tabasco <span>+ €3.00</span></h3> </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backet__order">
+                    <div class="food">
+                        <div class="food__cont">
+                            <div class="basket__name">
+                                <div class=location__item>
+                                    <p><span>Spezzo</span></p>
+                                </div>
+                                <div class="backet__name__item">
+                                    <h2>Creamy bacon Carbonara</h2> </div>
+                            </div>
+                            <div class="deleted__order__med">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="info__food">
+                            <div class="quan__food"> <img src=img/icon/arrowleft.png alt> <span> 2</span> <img src=img/icon/arrowright.png alt> </div>
+                            <div class="cost__food">€ <span>10.00</span> </div>
+                            <div class="deleted__order">
+                                <button class=btn_deleted>
+                                    <?xml version="1.0" encoding="iso-8859-1"?>
+                                        <svg width="6px" height="6px" fill="#ab3e39" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" /> </g>
+                                            </g>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="place__order">
+                    <div class="total__order">
+                        <h2> total: </h2> <span>€120</span> </div>
+                    <div class="place__btn">
+                        <button class="btn_place">place my order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=title_lk>
+        <h4>extra shop</h4> </div>
+    <div class="container__rest">
+        <div class="menu__shop">
+            <h2 class="active"><a href="" class="item_shop">pasta</a></h2>
+            <h2><a href="" class="item_shop">pizza</a></h2>
+            <h2><a href="" class="item_shop">salads</a></h2>
+            <h2><a href="" class="item_shop">soups</a></h2>
+            <h2><a href="" class="item_shop">main coursers</a></h2>
+            <h2><a href="" class="item_shop">grill menu</a></h2>
+            <h2><a href="" class="item_shop">desserts</a></h2>
+            <h2><a href="" class="item_shop">drinks</a></h2> </div>
+        <div class="menu">
+            <div class="menu__item">
+                <div class="food__item"> <img src="img/pestopasta.jpg" class="img__item">
+                    <div class="item__info">
+                        <h2>Pesto pasta</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
+                        <div class="item__cost">
+                            <h3>€7.00</h3>
+                            <button class="btn_add"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food__item"> <img src="img/creamybaconcarbonara.jpg" class="img__item">
+                    <div class="item__info">
+                        <h2>creamy bacon carbonara</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
+                        <div class="item__cost">
+                            <h3>€10.00</h3>
+                            <button class="btn_add"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food__item"> <img src="img/creamybaconcarbonara.jpg" class="img__item">
+                    <div class="item__info">
+                        <h2>Penne pasta</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
+                        <div class="item__cost">
+                            <h3>€8.00</h3>
+                            <button class="btn_add"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food__item">
+                    <div class="item__info__small">
+                        <h2>4 cheeses</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
+                        <div class="item__cost">
+                            <h3>€10.00</h3>
+                            <button class="btn_add"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food__item">
+                    <div class="item__info__small">
+                        <h2>4 cheeses</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
+                        <div class="item__cost">
+                            <h3>€10.00</h3>
+                            <button class="btn_add"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/slick.js"></script>
+</body>
+</html>
