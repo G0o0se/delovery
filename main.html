@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <title>Delovery</title>
 </head>
 
@@ -33,251 +33,121 @@
     </div>
 </header>
 
-<div id="main"></div>
+<div class="main-bcgr"></div>
 
 <div class="page">
-    <div class="search__rest" id="main__d2">
-        <div class="search__btn">
-            <div class="d2">
-                <form>
-                    <!DOCTYPE PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg fill="#65c6bb" height="25px" id="magnifiermain" version="1.1" viewBox="0 0 485.213 485.213" width="25px" x="0px"
-                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         y="0px">
-                            <g>
-                                <g>
-                                    <path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324
-            c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z"/>
-                                    <path d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951
-            C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46
-            c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465
-            C318.424,257.208,257.206,318.416,181.956,318.416z"/>
-                                    <path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z"/> </g>
-                            </g>
-                        </svg>
-                    <input placeholder="Enter the type of food..." type="text">
-                    <button class="btn_search">search</button>
-                </form>
+    <div class="search-rest" id="main-d2">
+        <div class="search-btns">
+            <div class="search-menu">
+                    <input placeholder="Enter the type of food..." type="text"/>
+                    <button class="btn-search">search</button>
             </div>
-            <div class="btn__media">
-                <div class="btn__container" id="main__btn">
-                    <div class="btn__rest">
-                        <button class="btn_time" id="main__time">delivery time</button>
+            <div class="btn-media">
+                <div class="btn-container" id="main-btn">
+                    <div class="btn-rest">
+                        <button class="btn-time" id="main-time">delivery time</button>
                     </div>
-                    <div class="btn__rest">
-                        <button class="btn_filters" id="main_filters">filters</button>
+                    <div class="btn-rest">
+                        <button class="btn-filters" id="main-filters">filters</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="filters">
-        <div class="cross__filter">
-            <svg fill="#65c6bb" height="16px" id="Layer_1" version="1.1" viewBox="0 0 492 492"
-                 width="16px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                    <g>
-                        <g>
-                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/> </g>
-                    </g>
-                </svg>
-        </div>
-        <svg fill="#65c6bb" height="25" viewBox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg">
-            <g data-name="Layer 62" id="Layer_62">
-                <path d="m3 6h11a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2h1a1 1 0 0 0 0-2h-1a2 2 0 0 0 -2-2h-2a2 2 0 0 0 -2 2h-11a1 1 0 0 0 0 2zm13-2h2v1 1h-2zm5 7h-9a2 2 0 0 0 -2-2h-2a2 2 0 0 0 -2 2h-3a1 1 0 0 0 0 2h3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2h9a1 1 0 0 0 0-2zm-13 2v-2h2v1 1zm13 5h-3a2 2 0 0 0 -2-2h-2a2 2 0 0 0 -2 2h-9a1 1 0 0 0 0 2h9a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2h3a1 1 0 0 0 0-2zm-7 2v-2h2v1 1z"/>
-            </g>
-        </svg>
-        <h2>filters</h2>
-        <div class="filters__choise">
-            <input id="f1" name="ff" type="checkbox">
-            <label for="f1"><span></span>Chinese</label>
-            <input id="f2" name="ff" type="checkbox">
-            <label for="f2"><span></span>Italian</label>
-            <input id="f3" name="ff" type="checkbox">
-            <label for="f3"><span></span>Meat</label>
-            <input id="f4" name="ff" type="checkbox">
-            <label for="f4"><span></span>Vegeterian</label>
-            <input id="f5" name="ff" type="checkbox">
-            <label for="f5"><span></span>French</label>
-            <input id="f6" name="ff" type="checkbox">
-            <label for="f6"><span></span>Russian</label>
-            <input id="f7" name="ff" type="checkbox">
-            <label for="f7"><span></span>Seafood</label>
-            <input id="f8" name="ff" type="checkbox">
-            <label for="f8"><span></span>American</label>
-            <div class="accept__settings">
-                <button class="btn_accept"> Accept</button>
-            </div>
-        </div>
+    <div class="name-content">
+        <h1>type 1</h1>
     </div>
-    <div class="delivery">
-        <div class="cross__delivery">
-            <?xml version="1.0" encoding="iso-8859-1"?>
-            <svg fill="#65c6bb" height="16px" id="Layer_1" style="enable-background:new 0 0 492 492;" version="1.1" viewBox="0 0 492 492"
-                 width="16px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                    <g>
-                        <g>
-                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
-            c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
-            c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/> </g>
-                    </g>
-                </svg>
-        </div>
-        <?xml version="1.0" encoding="iso-8859-1"?>
-        <svg fill="#65c6bb" height="25px" id="Capa_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
-             width="25px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                <g>
-                    <g>
-                        <g>
-                            <circle cx="386" cy="210" r="20"/>
-                            <path d="M432,40h-26V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v20h-91V20c0-11.046-8.954-20-20-20
-                c-11.046,0-20,8.954-20,20v20h-90V20c0-11.046-8.954-20-20-20s-20,8.954-20,20v20H80C35.888,40,0,75.888,0,120v312
-                c0,44.112,35.888,80,80,80h153c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20H80c-22.056,0-40-17.944-40-40V120
-                c0-22.056,17.944-40,40-40h25v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h90v20c0,11.046,8.954,20,20,20s20-8.954,20-20V80h91
-                v20c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V80h26c22.056,0,40,17.944,40,40v114c0,11.046,8.954,20,20,20
-                c11.046,0,20-8.954,20-20V120C512,75.888,476.112,40,432,40z"/>
-                            <path d="M391,270c-66.72,0-121,54.28-121,121s54.28,121,121,121s121-54.28,121-121S457.72,270,391,270z M391,472
-                c-44.663,0-81-36.336-81-81s36.337-81,81-81c44.663,0,81,36.336,81,81S435.663,472,391,472z"/>
-                            <path d="M420,371h-9v-21c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v41c0,11.046,8.954,20,20,20h29
-                c11.046,0,20-8.954,20-20C440,379.954,431.046,371,420,371z"/>
-                            <circle cx="299" cy="210" r="20"/>
-                            <circle cx="212" cy="297" r="20"/>
-                            <circle cx="125" cy="210" r="20"/>
-                            <circle cx="125" cy="297" r="20"/>
-                            <circle cx="125" cy="384" r="20"/>
-                            <circle cx="212" cy="384" r="20"/>
-                            <circle cx="212" cy="210" r="20"/> </g>
-                    </g>
-                </g>
-            </svg>
-        <h2>delivery time</h2>
-        <div class="switch__deliv">Today
-            <label class="switch">
-                <input type="checkbox"> <span class="slider round"></span> </label>
-            <p>Tomorrow
-            <p>
-        </div>
-        <div class="delivery__choise">
-            <input id="dt1" name="dt" type="checkbox">
-            <label for="dt1"><span></span>ASAP</label>
-            <input id="dt2" name="dt" type="checkbox">
-            <label for="dt2"><span></span>12:00 - 12:15</label>
-            <input id="dt3" name="dt" type="checkbox">
-            <label for="dt3"><span></span>12:15 - 12:30</label>
-            <input id="dt4" name="dt" type="checkbox">
-            <label for="dt4"><span></span>12:30 - 12:45</label>
-            <input id="dt5" name="dt" type="checkbox">
-            <label for="dt5"><span></span>12:45 - 13:00</label>
-            <input id="dt6" name="dt" type="checkbox">
-            <label for="dt6"><span></span>13:00 - 13:15</label>
-            <input id="dt7" name="dt" type="checkbox">
-            <label for="dt7"><span></span>13:15 - 13:30</label>
-            <div class="accept__settings">
-                <button class="btn_accept"> Accept</button>
-            </div>
-        </div>
-    </div>
-    <div class="name__content">
-        <h4>type 1</h4></div>
-    <div class="menu_main_item">
-        <div class="food_main_item">
-            <img class="img__item" src="img/steak.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+    <div class="menu-main-item">
+        <div class="food-main-item">
+            <img alt="steak" class="img-item" src="img/steak.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>Beef bar</h2>
                     <p>Meat, grill</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery2"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery2"> 40-50 min</button>
                 </div>
             </div>
         </div>
-        <div class="food_main_item">
-            <img class="img__item" src="img/tacos.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+        <div class="food-main-item">
+            <img alt="tacos" class="img-item" src="img/tacos.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>Tacos</h2>
                     <p>Mexican</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery"> 40-50 min</button>
                 </div>
             </div>
         </div>
-        <div class="food_main_item">
-            <img class="img__item" src="img/pizza.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+        <div class="food-main-item">
+            <img alt="pizza" class="img-item" src="img/pizza.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>Spezzo</h2>
                     <p>Italian, pizza</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery2"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery2"> 40-50 min</button>
                 </div>
             </div>
         </div>
-        <div class="food_main_item">
-            <img class="img__item" src="img/taverna.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+        <div class="food-main-item">
+            <img alt="taverna" class="img-item" src="img/taverna.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>taverna</h2>
                     <p>Greek, seafood</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery"> 40-50 min</button>
                 </div>
             </div>
         </div>
-        <div class="food_main_item">
-            <img class="img__item" src="img/steak.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+        <div class="food-main-item">
+            <img alt="tacos" class="img-item" src="img/steak.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>Beef bar</h2>
                     <p>Meat, grill</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery2"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery2"> 40-50 min</button>
                 </div>
             </div>
         </div>
-        <div class="food_main_item">
-            <img class="img__item" src="img/tacos.jpg">
-            <div class="item_main_info">
-                <div class="name__item">
+        <div class="food-main-item">
+            <img alt="tacos" class="img-item" src="img/tacos.jpg">
+            <div class="item-main-info">
+                <div class="name-item">
                     <h2>Tacos</h2>
                     <p>Mexican</p>
                 </div>
-                <div class="btn_delivery">
-                    <button class="btn_timedelivery"> 40-50 min</button>
+                <div class="btn-delivery">
+                    <button class="btn-timedelivery"> 40-50 min</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container__news">
+
+    <div class="container-news">
         <div class="news">
             <h2>our recent news</h2>
-            <div class="all__news__item">
-                <div class="news__item">
-                    <div class="img__news"><img src="img/salmon.jpg"></div>
-                    <div class="info__news">
-                        <div class="time__news">
-                            <h5>5/03/2020</h5></div>
-                        <div class="name__news">
-                            <h3><a>lorem ipsum dolor sit amet</a></h3></div>
-                        <div class="text__news">
+            <div class="all-news-item">
+                <div class="news-item">
+                    <div class="img-news">
+                        <img alt="salmon" src="img/salmon.jpg">
+                    </div>
+                    <div class="info-news">
+                        <div class="time-news">
+                            5/03/2020</div>
+                        <div class="name-news">
+                            <h3><a>lorem ipsum dolor sit amet</a></h3>
+                        </div>
+                        <div class="text-news">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem.
                                 Aliquam erat volutpat. Etiam luctus, leo at convallis faucibus, nibh diam placerat enim,
                                 nec ultricies lectus nunc id nislDonec lorem justo, fermentum at mattis fermentum,
@@ -285,14 +155,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item">
-                    <div class="img__news"><img src="img/salmon.jpg"></div>
-                    <div class="info__news">
-                        <div class="time__news">
-                            <h5>5/03/2020</h5></div>
-                        <div class="name__news">
+                <div class="news-item">
+                    <div class="img-news">
+                        <img alt="salmon" src="img/salmon.jpg">
+                    </div>
+                    <div class="info-news">
+                        <div class="time-news">
+                            5/03/2020</div>
+                        <div class="name-news">
                             <h3><a>lorem ipsum dolor sit amet</a></h3></div>
-                        <div class="text__news">
+                        <div class="text-news">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem.
                                 Aliquam erat volutpat. Etiam luctus, leo at convallis faucibus, nibh diam placerat enim,
                                 nec ultricies lectus nunc id nislDonec lorem justo, fermentum at mattis fermentum,
@@ -300,14 +172,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="news__item" id="news__items3">
-                    <div class="img__news"><img src="img/salmon.jpg"></div>
-                    <div class="info__news">
-                        <div class="time__news">
-                            <h5>5/03/2020</h5></div>
-                        <div class="name__news">
+                <div class="news-item">
+                    <div class="img-news">
+                        <img alt="salmon" src="img/salmon.jpg">
+                    </div>
+                    <div class="info-news">
+                        <div class="time-news">
+                            5/03/2020</div>
+                        <div class="name-news">
                             <h3><a>lorem ipsum dolor sit amet</a></h3></div>
-                        <div class="text__news">
+                        <div class="text-news">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem.
                                 Aliquam erat volutpat. Etiam luctus, leo at convallis faucibus, nibh diam placerat enim,
                                 nec ultricies lectus nunc id nislDonec lorem justo, fermentum at mattis fermentum,
@@ -316,14 +190,13 @@
                     </div>
                 </div>
             </div>
-            <div class="btn__readmore">
-                <button class="btn__more">read more</button>
+            <div class="btn-readmore">
+                <button class="btn-more">read more</button>
             </div>
-            <div class="footer_news"></div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/popup.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/popup.js" type="text/javascript"></script>
 </body>
 </html>
