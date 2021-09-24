@@ -135,3 +135,26 @@ $("baskettot").attr("data-amount-goods", order)
 
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
