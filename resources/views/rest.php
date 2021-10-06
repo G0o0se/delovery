@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Goods</title>
 </head>
 
@@ -63,41 +63,43 @@
     </div>
     <div class=menu-item>
 
-    <?php
+<?php
+
     class CSV
     {
-        private string $_csv_file = 'goods.csv';
+        private string $_csv_file = '../../database/goods.csv';
 
         /**
          * @throws Exception
          */
+
         public function __construct($csv_file)
         {
             if (file_exists($csv_file)) {
-                $this->_csv_file = $csv_file; //Записываем путь к файлу в переменную
-            } else { //Если файл не найден то вызываем исключение
-                    throw new Exception("Файл не найден");
+                $this->_csv_file = $csv_file;
+            } else {
+                throw new Exception("Файл не найден");
             }
         }
 
         public function getCSV(): array
         {
-            $handle = fopen($this->_csv_file, "r"); //Открываем csv для чтения
+            $handle = fopen($this->_csv_file, "r");
 
-            $array_line_full = array(); //Массив будет хранить данные из csv
+            $array_line_full = array();
 
             while (($line = fgetcsv($handle, 0, ";")) !== false) {
-                $array_line_full[] = $line; //Записываем строчки в массив
+                $array_line_full[] = $line;
             }
-            fclose($handle); //Закрываем файл
-                return $array_line_full; //Возвращаем прочтенные данные
+            fclose($handle);
+            return $array_line_full;
         }
     }
 
         try {
-            $csv = new CSV("goods.csv"); //Открываем наш csv
+            $csv = new CSV("../../database/goods.csv");
             $get_csv = $csv->getCSV();
-            foreach ($get_csv as $value) { //Проходим по строкам
+            foreach ($get_csv as $value) {
                 $name = $value[0];
                 $description = $value[1];
                 $price = $value[2];
@@ -115,17 +117,18 @@
                             </div>
                       </div>";
             }
-        } catch (Exception $e) { //Если csv файл не существует, выводим сообщение
+        } catch (Exception $e) {
             echo "Ошибка: " . $e->getMessage();
         }
-        ?>
+?>
+
     </div>
     <div class="name-content">
         <h1>pizza</h1>
     </div>
     <div class="menu-item-small">
         <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=img/margherita.jpg/>
+            <img alt="margherita" class="img-item" src=../assets/img/margherita.jpg>
             <div class=item-info>
                 <h2>margherita</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
@@ -136,7 +139,7 @@
             </div>
         </div>
         <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=img/margherita.jpg/>
+            <img alt="margherita" class="img-item" src=../assets/img/margherita.jpg>
             <div class=item-info>
                 <h2>margherita</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
@@ -321,9 +324,9 @@
         </div>
         <div class="to-cart">
             <div class="quan-food-popup">
-                <img alt="arrow" src="img/icon/arrowleft.png"/>
+                <img alt="arrow" src="../assets/img/icon/arrowleft.png"/>
                 <span> 2</span>
-                <img alt="arrow" src="img/icon/arrowright.png"/>
+                <img alt="arrow" src="../assets/img/icon/arrowright.png"/>
             </div>
             <button class="btn-tocart">
                 <svg height="25px" id="troley" viewBox="0 0 221 234" width="27px"
@@ -351,6 +354,6 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/popup.js" type="text/javascript"></script>
+<script src="../assets/js/popup.js" type="text/javascript"></script>
 </body>
 </html>

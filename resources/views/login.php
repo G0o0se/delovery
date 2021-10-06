@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Login</title>
 </head>
 
 <body>
 
-<?php include 'header.php'?>
+<?php include 'header.php' ?>
 
 <div class="content-block">
     <div class="link-login-panel">
@@ -40,7 +40,7 @@
     </div>
 </div>
 
-<?php include 'footer.php'?>
+<?php include 'footer.php' ?>
 
 </body>
 

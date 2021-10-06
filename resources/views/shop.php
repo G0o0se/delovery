@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Basket</title>
 </head>
 
 <body>
 
-<?php include 'header.php'?>
+<?php include 'header.php' ?>
 
 <div class="content-block">
     <div class="container">
@@ -57,7 +57,7 @@
     </div>
     <div class="basket">
         <div class="basket-order">
-            <div class="img-food"><img alt src=img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -69,8 +69,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="basket-order">
-            <div class="img-food"><img alt src=img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -110,8 +110,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="basket-order">
-            <div class="img-food"><img alt src=img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -148,8 +148,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -188,8 +188,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -225,8 +225,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -262,8 +262,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -299,21 +299,18 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
-                            <svg fill="#ab3e39" height="6px" id="Layer-1"
-                                 viewBox="0 0 492 492" width="6px" x="0px"
-                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                 y="0px">
-                                            <g>
-                                                <g>
-                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+                        <svg fill="#ab3e39" height="6px" id="Layer-1" viewBox="0 0 492 492" width="6px" x="0px"
+                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><g><g>
+                        <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.
+                        86-19.028L468.02,7.872c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,
+                        7.856L246.008,191.82L62.048,7.872c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.
+                        02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052L191.828,246L7.872,429.952c-5.064,
+                        5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
             c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
             c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
             c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/> </g>
@@ -336,21 +333,18 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../assets/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
-                            <svg fill="#ab3e39" height="6px" id="Layer-1"
-                                 viewBox="0 0 492 492" width="6px" x="0px"
-                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                 y="0px">
-                                            <g>
-                                                <g>
-                                                    <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
-            c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
-            c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
-            L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+                            <svg fill="#ab3e39" height="6px" id="Layer-1" viewBox="0 0 492 492" width="6px" x="0px"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px"><g><g>
+                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.
+                            972-7.86-19.028L468.02,7.872c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.
+                            024,7.856L246.008,191.82L62.048,7.872 c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.
+                            78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052L191.828,246L7.872,429.
+                            952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
             c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
             c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
             c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/> </g>
@@ -387,7 +381,7 @@
     </ul>
     <div class="menu">
         <div class="menu-item">
-            <div class="food-item"><img class="img-item" src="img/pestopasta.jpg" alt="pestopasta">
+            <div class="food-item"><img class="img-item" src="../assets/img/pestopasta.jpg" alt="pestopasta">
                 <div class="item-info">
                     <h2>Pesto pasta</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
@@ -398,7 +392,8 @@
                     </div>
                 </div>
             </div>
-            <div class="food-item"><img class="img-item" src="img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
+            <div class="food-item">
+                <img class="img-item" src="../assets/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
                 <div class="item-info">
                     <h2>creamy bacon carbonara</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
@@ -409,7 +404,8 @@
                     </div>
                 </div>
             </div>
-            <div class="food-item"><img class="img-item" src="img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
+            <div class="food-item">
+                <img class="img-item" src="../assets/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
                 <div class="item-info">
                     <h2>Penne pasta</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
