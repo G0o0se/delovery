@@ -1,0 +1,20 @@
+{
+    "name": "denis/delovery",
+    "autoload": {
+        "psr-4": {
+            "Denis\\Delovery\\": "src/",
+            "Framework\\": "Framework/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denis789-4",
+            "email": "b0tt0miezz@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "^3.6",
+        "friendsofphp/php-cs-fixer": "^3.1",
+        "monolog/monolog": "^2.3"
+    }
+}

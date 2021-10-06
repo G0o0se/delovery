@@ -3,35 +3,13 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Delovery</title>
 </head>
 
 <body>
 
-<header>
-    <div class="content">
-        <a class="logo" href="/main.html">
-            <img alt="Logo" src="img/logo.png">
-        </a>
-        <ul class="header-menu">
-            <li class="item-menu"><a href="">Home</a></li>
-            <li class="item-menu"><a href="">Services</a></li>
-            <li class="item-menu"><a href="">FAQ</a></li>
-            <li class="item-menu"><a href="">Contact Us</a></li>
-        </ul>
-        <div class="header-menu-user">
-            <div class="menu-user-item">
-                <img alt="" src="img/icon/user.png">
-                <p>My Account</p>
-            </div>
-            <div class="menu-user-item">
-                <img alt="" src="img/icon/basket.png">
-                <p>My Cart</p>
-            </div>
-        </div>
-    </div>
-</header>
+<?php include 'header.php' ?>
 
 <div class="main-bcgr"></div>
 
@@ -60,7 +38,7 @@
     </div>
     <div class="menu-main-item">
         <div class="food-main-item">
-            <img alt="steak" class="img-item" src="img/steak.jpg">
+            <img alt="steak" class="img-item" src="../assets/img/steak.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>Beef bar</h2>
@@ -72,7 +50,7 @@
             </div>
         </div>
         <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="img/tacos.jpg">
+            <img alt="tacos" class="img-item" src="../assets/img/tacos.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>Tacos</h2>
@@ -84,7 +62,7 @@
             </div>
         </div>
         <div class="food-main-item">
-            <img alt="pizza" class="img-item" src="img/pizza.jpg">
+            <img alt="pizza" class="img-item" src="../assets/img/pizza.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>Spezzo</h2>
@@ -96,7 +74,7 @@
             </div>
         </div>
         <div class="food-main-item">
-            <img alt="taverna" class="img-item" src="img/taverna.jpg">
+            <img alt="taverna" class="img-item" src="../assets/img/taverna.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>taverna</h2>
@@ -108,7 +86,7 @@
             </div>
         </div>
         <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="img/steak.jpg">
+            <img alt="tacos" class="img-item" src="../assets/img/steak.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>Beef bar</h2>
@@ -120,7 +98,7 @@
             </div>
         </div>
         <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="img/tacos.jpg">
+            <img alt="tacos" class="img-item" src="../assets/img/tacos.jpg">
             <div class="item-main-info">
                 <div class="name-item">
                     <h2>Tacos</h2>
@@ -139,7 +117,7 @@
             <div class="all-news-item">
                 <div class="news-item">
                     <div class="img-news">
-                        <img alt="salmon" src="img/salmon.jpg">
+                        <img alt="salmon" src="../assets/img/salmon.jpg">
                     </div>
                     <div class="info-news">
                         <div class="time-news">
@@ -157,7 +135,7 @@
                 </div>
                 <div class="news-item">
                     <div class="img-news">
-                        <img alt="salmon" src="img/salmon.jpg">
+                        <img alt="salmon" src="../assets/img/salmon.jpg">
                     </div>
                     <div class="info-news">
                         <div class="time-news">
@@ -174,7 +152,7 @@
                 </div>
                 <div class="news-item">
                     <div class="img-news">
-                        <img alt="salmon" src="img/salmon.jpg">
+                        <img alt="salmon" src="../assets/img/salmon.jpg">
                     </div>
                     <div class="info-news">
                         <div class="time-news">
@@ -197,6 +175,6 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/popup.js" type="text/javascript"></script>
+<script src="../assets/js/popup.js" type="text/javascript"></script>
 </body>
 </html>

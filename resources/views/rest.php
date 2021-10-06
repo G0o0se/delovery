@@ -3,43 +3,21 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
     <title>Goods</title>
 </head>
 
 <body>
 
-<header>
-    <div class="content">
-        <a class="logo" href="/main.html">
-            <img alt="Logo" src="img/logo.png" />
-        </a>
-        <ul class="header-menu">
-            <li class="item-menu"><a href="">Home</a></li>
-            <li class="item-menu"><a href="">Services</a></li>
-            <li class="item-menu"><a href="">FAQ</a></li>
-            <li class="item-menu"><a href="">Contact Us</a></li>
-        </ul>
-        <div class="header-menu-user">
-            <div class="menu-user-item">
-                <img alt="user" src="img/icon/user.png" />
-                <p>My Account</p>
-            </div>
-            <div class="menu-user-item">
-                <img alt="basket" src="img/icon/basket.png" />
-                <p>My Cart</p>
-            </div>
-        </div>
-    </div>
-</header>
+<?php include 'header.php' ?>
 
 <div class="delivery-img"></div>
 
 <div class="search-rest">
     <div class="search-btns">
         <div class="search-menu">
-                <input placeholder="Enter the type of food..." type="text" id="rest" />
-                <button class="btn-search">search</button>
+            <input placeholder="Enter the type of food..." type="text" id="rest"/>
+            <button class="btn-search">search</button>
         </div>
         <div class="btn-media">
             <div class="btn-container">
@@ -84,91 +62,73 @@
         <h1>pasta</h1>
     </div>
     <div class=menu-item>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pestopasta" class="img-item" src=img/pestopasta.jpg />
-            <div class=item-info>
-                <h2>Pesto pasta</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€7.00</h3>
-                    <a href="#win2">
-                        <button class=btn-add></button>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+<?php
+
+    class CSV
+    {
+        private string $_csv_file = '../../database/goods.csv';
+
+        /**
+         * @throws Exception
+         */
+
+        public function __construct($csv_file)
+        {
+            if (file_exists($csv_file)) {
+                $this->_csv_file = $csv_file;
+            } else {
+                throw new Exception("Файл не найден");
+            }
+        }
+
+        public function getCSV(): array
+        {
+            $handle = fopen($this->_csv_file, "r");
+
+            $array_line_full = array();
+
+            while (($line = fgetcsv($handle, 0, ";")) !== false) {
+                $array_line_full[] = $line;
+            }
+            fclose($handle);
+            return $array_line_full;
+        }
+    }
+
+        try {
+            $csv = new CSV("../../database/goods.csv");
+            $get_csv = $csv->getCSV();
+            foreach ($get_csv as $value) {
+                $name = $value[0];
+                $description = $value[1];
+                $price = $value[2];
+                $images = $value[3];
+
+                echo "<div class=food-main-item>
+                        <img alt=pestopasta class=img-item src='$images'>
+                            <div class=item-info>
+                                <h2>$name</h2>
+                                <p>$description</p>
+                                <div class=item-cost>
+                                    <h3>$price</h3>
+                                    <button class=btn-add></button>
+                                </div>
+                            </div>
+                      </div>";
+            }
+        } catch (Exception $e) {
+            echo "Ошибка: " . $e->getMessage();
+        }
+?>
+
     </div>
     <div class="name-content">
         <h1>pizza</h1>
     </div>
     <div class="menu-item-small">
         <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=img/margherita.jpg />
+            <img alt="margherita" class="img-item" src=../assets/img/margherita.jpg>
             <div class=item-info>
                 <h2>margherita</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
@@ -179,7 +139,7 @@
             </div>
         </div>
         <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=img/margherita.jpg />
+            <img alt="margherita" class="img-item" src=../assets/img/margherita.jpg>
             <div class=item-info>
                 <h2>margherita</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
@@ -231,7 +191,8 @@
             L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
             c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
             c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/> </g>
+            c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+                        </g>
                     </g>
                 </svg>
     </div>
@@ -269,7 +230,8 @@
             c-104.2,2.2-194.3-85.7-194-190.3C66,152.3,152.9,65.7,256.9,65.7c87.5,0,165.1,62.1,184.8,148c1.2,5.4,6.6,8.8,12,7.5
             c5.4-1.2,8.7-6.6,7.5-12C439.4,114.3,353.6,45.7,256.9,45.7C142.1,45.7,46.1,141.4,45.7,256C45.3,371.6,144.8,468.7,260,466.3
             c86.4-1.7,166.5-59.9,194.8-141.6c2.7-7.6,4.9-15.7,6.7-23.8C462.6,295.5,459.2,290.2,453.8,289L453.8,289z"/>
-                                <path d="M466.1,254.1c-1.8-8.8-13.8-10.9-18.4-3.2c-4.7,7.8,3.1,17.5,11.7,14.6C464.2,263.9,467.1,258.9,466.1,254.1z"/> </g>
+                                <path d="M466.1,254.1c-1.8-8.8-13.8-10.9-18.4-3.2c-4.7,7.8,3.1,17.5,11.7,14.6C464.2,263.9,467.1,258.9,466.1,254.1z"/>
+                            </g>
                         </g>
                 <path d="M347.6,232.5H273l64.4-113.3c1.6-2.8,1.6-6.2,0-9c-1.6-2.8-4.6-4.5-7.8-4.5H221.5c-3.9,0-7.3,2.5-8.6,6.2l-54.1,162.8
     c-0.9,2.7-0.5,5.8,1.2,8.1c1.7,2.3,4.4,3.7,7.3,3.7h76.5l-48.7,114.2c-1.7,4.1-0.3,8.8,3.5,11.2c3.7,2.4,8.6,1.7,11.6-1.6
@@ -288,10 +250,11 @@
             c-104.2,2.2-194.3-85.7-194-190.3C66,152.3,152.9,65.7,256.9,65.7c87.5,0,165.1,62.1,184.8,148c1.2,5.4,6.6,8.8,12,7.5
             c5.4-1.2,8.7-6.6,7.5-12C439.4,114.3,353.6,45.7,256.9,45.7C142.1,45.7,46.1,141.4,45.7,256C45.3,371.6,144.8,468.7,260,466.3
             c86.4-1.7,166.5-59.9,194.8-141.6c2.7-7.6,4.9-15.7,6.7-23.8C462.6,295.5,459.2,290.2,453.8,289L453.8,289z"/>
-                                    <path d="M466.1,254.1c-1.8-8.8-13.8-10.9-18.4-3.2c-4.7,7.8,3.1,17.5,11.7,14.6C464.2,263.9,467.1,258.9,466.1,254.1z"/> </g>
+                                    <path d="M466.1,254.1c-1.8-8.8-13.8-10.9-18.4-3.2c-4.7,7.8,3.1,17.5,11.7,14.6C464.2,263.9,467.1,258.9,466.1,254.1z"/>
+                                </g>
                             </g>
                 <g>
-                                <path d="M384.1,363v-82c0-5.7-4.6-10.2-10.2-10.2s-10.2,4.6-10.2,10.2v82c0,5.7,4.6,10.2,10.2,10.2
+                    <path d="M384.1,363v-82c0-5.7-4.6-10.2-10.2-10.2s-10.2,4.6-10.2,10.2v82c0,5.7,4.6,10.2,10.2,10.2
         S384.1,368.6,384.1,363z" id="XMLID-1454-"/>
                     <path d="M186.4,273.8c-4-4-10.5-4-14.5,0l-23.5,23.5V281c0-5.7-4.6-10.2-10.2-10.2c-5.7,0-10.2,4.6-10.2,10.2v41
         v0v41c0,5.7,4.6,10.2,10.2,10.2c5.7,0,10.2-4.6,10.2-10.2v-16.3l23.5,23.5c2,2,4.6,3,7.2,3c2.6,0,5.2-1,7.2-3c4-4,4-10.5,0-14.5
@@ -302,7 +265,8 @@
                     <path d="M323.9,369.1c3.4,2.6,7.7,4.2,12.3,4.2c5.7,0,10.2-4.6,10.2-10.2s-4.6-10.2-10.2-10.2v-6.1v-32.8
         c0-5.7-4.6-10.2-10.2-10.2h-16.4c-19.2,0-34.8,15.6-34.8,34.8s15.6,34.8,34.8,34.8C314.9,373.2,319.8,371.7,323.9,369.1z
          M295.3,338.4c0-7.9,6.4-14.3,14.3-14.3h6.1v22.5c0,3.4-2.8,6.1-6.1,6.1C301.7,352.7,295.3,346.3,295.3,338.4z"
-                          id="XMLID-1877-"/> </g>
+                          id="XMLID-1877-"/>
+                </g>
                 <path d="M246.3,234.6V98.7c0-5.4,4.4-9.7,9.7-9.7c5.4,0,9.7,4.4,9.7,9.7v135.9l-9.7,9.7L246.3,234.6z M262.9,274.2l58.3-58.3
     c3.8-3.8,3.8-10,0-13.8s-10-3.8-13.8,0L256,253.5l-51.5-51.5c-3.8-3.8-10-3.8-13.8,0c-3.8,3.8-3.8,10,0,13.8l58.3,58.3
     C252.9,278,259.1,278,262.9,274.2C262.9,274.2,262.9,274.2,262.9,274.2z"/> </svg>
@@ -360,9 +324,9 @@
         </div>
         <div class="to-cart">
             <div class="quan-food-popup">
-                <img alt="arrow" src="img/icon/arrowleft.png" />
+                <img alt="arrow" src="../assets/img/icon/arrowleft.png"/>
                 <span> 2</span>
-                <img alt="arrow" src="img/icon/arrowright.png" />
+                <img alt="arrow" src="../assets/img/icon/arrowright.png"/>
             </div>
             <button class="btn-tocart">
                 <svg height="25px" id="troley" viewBox="0 0 221 234" width="27px"
@@ -390,6 +354,6 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/popup.js" type="text/javascript"></script>
+<script src="../assets/js/popup.js" type="text/javascript"></script>
 </body>
 </html>
