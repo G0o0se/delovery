@@ -53,15 +53,10 @@ class ComposerStaticInit3700c23cf3f0882c06d9d10e31baa28d
         array (
             'Monolog\\' => 8,
         ),
-        'F' => 
-        array (
-            'Framework\\' => 10,
-        ),
         'D' => 
         array (
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
-            'Denis\\Delovery\\' => 15,
         ),
         'C' => 
         array (
@@ -167,10 +162,6 @@ class ComposerStaticInit3700c23cf3f0882c06d9d10e31baa28d
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Framework\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Framework',
-        ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
@@ -178,10 +169,6 @@ class ComposerStaticInit3700c23cf3f0882c06d9d10e31baa28d
         'Doctrine\\Common\\Annotations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
-        ),
-        'Denis\\Delovery\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Composer\\XdebugHandler\\' => 
         array (
@@ -195,7 +182,6 @@ class ComposerStaticInit3700c23cf3f0882c06d9d10e31baa28d
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PhpCsFixer\\Diff\\Chunk' => __DIR__ . '/..' . '/php-cs-fixer/diff/src/Chunk.php',
