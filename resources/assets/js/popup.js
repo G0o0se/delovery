@@ -5,3 +5,10 @@ $('.close-popup').on('click', function() {
 $('.btn-add').on('click', function() {
     $('.popup').show();
 });
+
+
+
+
+
+
+
