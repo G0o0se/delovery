@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <title>Login</title>
-</head>
-
-<body>
-
-<?php include 'header.php' ?>
-
 <div class="content-block">
     <div class="link-login-panel">
-        <a class="link-item-login" href="">Login</a>
-        <a class="link-item-login active" href="">register</a>
+        <a class="link-item-login active" href="">Login</a>
+        <a class="link-item-login" href="registration">register</a>
     </div>
     <div class="active-phone">
         <h3>Please, confirm your phone number to complete registration</h3>
@@ -39,9 +26,3 @@
         </form>
     </div>
 </div>
-
-<?php include 'footer.php' ?>
-
-</body>
-
-</html>
