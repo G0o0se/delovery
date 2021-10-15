@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <title>Register</title>
-</head>
-
-<body>
-
-<?php include 'header.php'; ?>
-
 <div class="content-block">
     <div class="link-login-panel">
-        <a class="link-item-login" href="">login</a>
+        <a class="link-item-login" href="login">login</a>
         <a class="link-item-login active" href="">register</a>
     </div>
     <div class="active-phone">
@@ -49,8 +36,3 @@
         </div>
     </div>
 </div>
-
-<?php include 'footer.php' ?>
-
-</body>
-</html>

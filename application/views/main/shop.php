@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <link href="../assets/css/style.css" rel="stylesheet" type="text/css"/>
-    <title>Basket</title>
-</head>
-
-<body>
-
-<?php include 'header.php' ?>
-
 <div class="content-block">
     <div class="container">
         <div class="title-lk">
@@ -57,7 +44,7 @@
     </div>
     <div class="basket">
         <div class="basket-order">
-            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../../../public/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -69,8 +56,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -95,7 +82,7 @@
             </div>
         </div>
         <div class="basket-order">
-            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../../../public/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -110,8 +97,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -136,7 +123,7 @@
             </div>
         </div>
         <div class="basket-order">
-            <div class="img-food"><img alt src=../assets/img/carbonara.jpg></div>
+            <div class="img-food"><img alt src=../../../public/img/carbonara.jpg></div>
             <div class="food">
                 <div class="food-cont">
                     <div class="basket-name">
@@ -148,8 +135,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -188,8 +175,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -225,8 +212,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -262,8 +249,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -299,8 +286,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -333,8 +320,8 @@
                     </div>
                 </div>
                 <div class="info-food">
-                    <div class="quan-food"><img alt src=../assets/img/icon/arrowleft.png> <span> 2</span> <img
-                            alt src=../assets/img/icon/arrowright.png></div>
+                    <div class="quan-food"><img alt src=../../../public/img/icon/arrowleft.png> <span> 2</span> <img
+                            alt src=../../../public/img/icon/arrowright.png></div>
                     <div class="cost-food">€ <span>10.00</span></div>
                     <div class="deleted-order">
                         <button class=btn-deleted>
@@ -381,7 +368,7 @@
     </ul>
     <div class="menu">
         <div class="menu-item">
-            <div class="food-item"><img class="img-item" src="../assets/img/pestopasta.jpg" alt="pestopasta">
+            <div class="food-item"><img class="img-item" src="../../../public/img/pestopasta.jpg" alt="pestopasta">
                 <div class="item-info">
                     <h2>Pesto pasta</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
@@ -393,7 +380,7 @@
                 </div>
             </div>
             <div class="food-item">
-                <img class="img-item" src="../assets/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
+                <img class="img-item" src="../../../public/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
                 <div class="item-info">
                     <h2>creamy bacon carbonara</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
@@ -405,7 +392,7 @@
                 </div>
             </div>
             <div class="food-item">
-                <img class="img-item" src="../assets/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
+                <img class="img-item" src="../../../public/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
                 <div class="item-info">
                     <h2>Penne pasta</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
@@ -441,5 +428,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>
