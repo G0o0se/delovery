@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8"/>
     <link href="/public/css/style.css" rel="stylesheet" type="text/css"/>
-    <title><?php echo $title ?></title>
+    <title><?php echo $title?></title>
 </head>
+
+
 
 <header>
     <div class="content">
@@ -37,7 +39,7 @@
 
 <body>
 
-<?php echo $content ?>
+<?php echo $content; ?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/public/js/popup.js" type="text/javascript"></script>
