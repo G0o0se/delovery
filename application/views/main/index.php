@@ -1,10 +1,3 @@
-<?php foreach ($articles as $article): ?>
-    <h2><a href="/articles/<?= $article->getId() ?>"><?= $article->getName() ?></a></h2>
-    <p><?= $article->getText() ?></p>
-    <hr>
-<?php endforeach; ?>
-
-
 <div class="main-bcgr"></div>
 
 <div class="page">
@@ -30,19 +23,24 @@
     <div class="name-content">
         <h1>type 1</h1>
     </div>
+
+    </div>
     <div class="menu-main-item">
-        <div class="food-main-item">
-            <img alt="steak" class="img-item" src="/public/img/steak.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Beef bar</h2>
-                    <p>Meat, grill</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery2"> 40-50 min</button>
+        <?php foreach ($goods as $good): ?>
+            <div class="food-main-item">
+                <img alt="steak" class="img-item" src="<?= $good->getImage() ?>">
+                <div class="item-main-info">
+                    <div class="name-item">
+                        <h2><?= $good->getName() ?></h2>
+                        <p><?= $good->getDescription() ?></p>
+                    </div>
+                    <div class="btn-delivery">
+                        <button class="btn-timedelivery2"> 40-50 min</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach; ?>
+
         <div class="food-main-item">
             <img alt="tacos" class="img-item" src="/public/img/tacos.jpg">
             <div class="item-main-info">

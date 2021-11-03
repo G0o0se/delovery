@@ -2,15 +2,15 @@
 
 namespace application\controllers;
 
-use application\models\articles\Article;
 use application\core\Controller;
+use application\models\goods\Good;
 
 class MainController extends Controller
 {
     public function indexAction()
     {
-        $articles = Article::findAll();
-        $this->view->render('Главная', ['articles' => $articles]);
+        $goods = Good::findAll();
+        $this->view->render('Главная', ['goods' => $goods]);
     }
 
     public function restAction()

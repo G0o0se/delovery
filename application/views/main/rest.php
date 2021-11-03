@@ -49,6 +49,20 @@
         <h1>pasta</h1>
     </div>
     <div class=menu-item>
+        <?php foreach ($goods as $good): ?>
+            <div class="food-main-item">
+                <img alt="steak" class="img-item" src="<?= $good->getImage() ?>">
+                <div class="item-main-info">
+                    <div class="name-item">
+                        <h2><?= $good->getName() ?></h2>
+                        <p><?= $good->getDescription() ?></p>
+                    </div>
+                    <div class="btn-delivery">
+                        <button class="btn-timedelivery2"> 40-50 min</button>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
     <div class="name-content">
         <h1>pizza</h1>

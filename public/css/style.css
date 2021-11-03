@@ -182,7 +182,7 @@ header {
     width: 100%;
 }
 
-.menu-user-item a{
+.menu-user-item a {
     display: flex;
     flex-direction: row;
     user-select: none;
@@ -207,6 +207,15 @@ header {
     transition: all 0.4s;
 }
 
+.account-block{
+    position: relative;
+    padding-top: 50px;
+    background-color: #fff;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: calc(100vh - 205px);
+}
+
 .content-block {
     position: relative;
     padding-top: 50px;
@@ -215,13 +224,13 @@ header {
     margin: 0 auto;
 }
 
-.content-block .link-login-panel {
+.account-block .link-login-panel {
     text-align: center;
     position: relative;
     margin-bottom: 45px;
 }
 
-.content-block .link-item-login {
+.account-block .link-item-login {
     color: #a7b0b0;
     font-family: "Ariq", sans-serif;
     letter-spacing: 4px;
@@ -231,27 +240,13 @@ header {
     position: relative;
 }
 
-.content-block .link-item-login :hover,
-.content-block .link-item-login.active {
+.account-block .link-item-login :hover,
+.account-block .link-item-login.active {
     color: #65c6bb;
 }
 
-.content-block .link-item-login :first-child {
+.account-block .link-item-login :first-child {
     border-right: 1px solid #e0f4f1;
-}
-
-.active-phone {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-.active-phone h3 {
-    color: #174040;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
 }
 
 .form-auth {
@@ -397,7 +392,7 @@ header {
     margin-right: 30px;
 }
 
-#rest{
+#rest {
     width: 68%;
 }
 
@@ -966,6 +961,7 @@ textarea {
     font-size: 16px;
     line-height: 15px;
     margin: 0;
+    max-width: 220px;
 }
 
 .btn-timedelivery,
@@ -1392,7 +1388,7 @@ footer {
     font-size: 18px;
 }
 
-.popup{
+.popup {
     display: none;
 }
 
