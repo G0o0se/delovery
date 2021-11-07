@@ -8,7 +8,7 @@ abstract class ActiveRecordEntity
 {
     /** @var int */
     protected $id;
-    protected $email;
+    protected string $email;
 
     /**
      * @return int
@@ -42,23 +42,34 @@ abstract class ActiveRecordEntity
      * @param int $id
      * @return static|null
      */
-    public static function getById(int $id): ?self
+    public static function getByEmail(string $email): ?self
     {
         $db = new Db();
         $entities = $db->query(
-            'SELECT * FROM `' . static::getTableName() . '` WHERE id=:id;',
-            [':id' => $id],
+            'SELECT count(*) as count FROM `' . static::getTableName() . '` WHERE email=:email;',
+            [':email' => $email],
             static::class
         );
         return $entities ? $entities[0] : null;
     }
 
-    public static function getByMail(int $email): ?self
+    public static function getByLogin(string $email, string $password): ?self
     {
         $db = new Db();
-        $entities = $db->query(
-            'SELECT count(*) FROM `' . static::getTableName() . '` WHERE email = :email;',
-            [':email' => $email],
+        $entities = $db-> query(
+            "SELECT count(*) as count FROM `" . static::getTableName() . "` WHERE email = :email and password = :password;",
+            [':email' => $email, ':password' => $password],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function AddUser(string $name, string $email, string $password): ?self
+    {
+        $db = new Db();
+        $entities = $db-> query(
+            "INSERT INTO `" . static::getTableName() . "` (name, email, password) values( :name, :email, :password);",
+            [':name' => $name, ':email' => $email, ':password' => $password],
             static::class
         );
         return $entities ? $entities[0] : null;

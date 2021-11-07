@@ -6,21 +6,23 @@ use application\models\ActiveRecordEntity;
 
 class User extends ActiveRecordEntity
 {
-    /** @var int */
-    protected $id;
+    protected string $email;
+    protected string $password;
+    public string $count;
 
-    /** @var string */
-    protected $email;
-
-    /** @var string */
-    protected $name;
-
-    /** @var int */
-    protected $is_admin;
-
-    public function getMail(): string
+    public function getEmail(): string
     {
         return $this->email;
+    }
+
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function getCount(): string
+    {
+        return $this->count;
     }
 
     protected static function getTableName(): string

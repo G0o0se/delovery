@@ -9,25 +9,49 @@ class AccountController extends Controller
 {
     public function loginAction()
     {
-        $this->view->render('Вход');
+        if (isset($_POST["submit"])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            if (empty(trim($_POST["email"]))) {
+                $err = "Please enter fields";
+            } else {
+                $users = User::getByLogin($email, $password);
+                if ($users->count == '1') {
+                    header('Location: /');
+                } else {
+                    $err = 'Invalid password or email';
+                }
+            }
+        }
+        $this->view->render('Вход', compact("err"));
     }
 
     public function registrationAction()
     {
-        $this->view->render('Регистрация');
         if (isset($_POST["submit"])) {
-            if (!empty($_POST['login']) && !empty($_POST['password'])) {
-                $email = ($_POST['login']);
+            if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['accpassword'])) {
+                $name = ($_POST['name']);
+                $email = ($_POST['email']);
                 $password = ($_POST['password']);
-                $users = User::getByMail($email);
-                if ($users->getMail() == $email) {
-                    echo "Vse top";
+                $accpassword = ($_POST['accpassword']);
+
+                if ($accpassword != $password) {
+                    $err = 'Password not identical';
                 } else {
-                    echo "Пользователь с таким логином существует!";
+                    $mail = User::getByEmail($email);
+                    if ($mail->count == '1') {
+                        $err = 'Email already registered';
+                    } else {
+                        $add = User::AddUser($name, $email, $password);
+                        header('Location: /');
+                    }
                 }
             } else {
-                echo "Заполните поля";
+                $err = 'Please enter fields';
             }
         }
+
+        $this->view->render('Регистрация', compact("err"));
     }
 }

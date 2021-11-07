@@ -227,7 +227,7 @@ header {
 .account-block .link-login-panel {
     text-align: center;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 22px;
 }
 
 .account-block .link-item-login {
@@ -252,7 +252,7 @@ header {
 .form-auth {
     position: relative;
     max-width: 370px;
-    margin: 0 auto;
+    margin: 22px auto 0 auto;
     padding-bottom: 100px;
 }
 
@@ -1493,4 +1493,17 @@ footer {
 .quan-food-popup img {
     width: 6px;
     height: 11px;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    color: #ba3939;
+    background: #ffe0e0;
+    border: 1px solid #a33a3a;
+    max-width: 400px;
+    border-radius: 10px;
 }
