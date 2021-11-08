@@ -9,18 +9,24 @@ class AccountController extends Controller
 {
     public function loginAction()
     {
-        if (isset($_POST["submit"])) {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+        if (isset($_SESSION['logged_user'])) {
+            header('Location: /');
+        } else {
+            if (isset($_POST["submit"])) {
+                $email = $_POST['email'];
+                $password = $_POST['password'];
 
-            if (empty(trim($_POST["email"]))) {
-                $err = "Please enter fields";
-            } else {
-                $users = User::getByLogin($email, $password);
-                if ($users->count == '1') {
-                    header('Location: /');
+                if (empty(trim($_POST["email"]))) {
+                    $err = "Please enter fields";
                 } else {
-                    $err = 'Invalid password or email';
+                    $users = User::getByLogin($email, $password);
+                    $name = User::NameByEmail($email);
+                    if ($users->count == '1') {
+                        $_SESSION['logged_user'] = $name -> name;
+                        header('Location: /');
+                    } else {
+                        $err = 'Invalid password or email';
+                    }
                 }
             }
         }
@@ -53,5 +59,11 @@ class AccountController extends Controller
         }
 
         $this->view->render('Регистрация', compact("err"));
+    }
+
+    public function logoutAction()
+    {
+        unset($_SESSION["logged_user"]);
+        header("Location:/");
     }
 }

@@ -6,26 +6,11 @@ use application\models\ActiveRecordEntity;
 
 class Good extends ActiveRecordEntity
 {
-    /** @var int */
-    protected $id;
-
-    /** @var string */
-    protected $name;
-
-    /** @var string */
-    protected $url;
-
-    /** @var string */
-    protected $image;
-
-    /** @var string */
-    protected $description;
-
-    /** @var double */
-    protected $price;
-
-    /** @var int */
-    protected $count_buys;
+    protected string $name;
+    protected string $url;
+    protected string $image;
+    protected string $description;
+    protected string $cooking_time;
 
     /**
      * @return string
@@ -49,6 +34,16 @@ class Good extends ActiveRecordEntity
     public function getImage(): string
     {
         return $this->image;
+    }
+
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    public function getCookTime(): string
+    {
+        return $this->cooking_time;
     }
 
     protected static function getTableName(): string

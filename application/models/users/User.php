@@ -9,6 +9,7 @@ class User extends ActiveRecordEntity
     protected string $email;
     protected string $password;
     public string $count;
+    public string $name;
 
     public function getEmail(): string
     {
@@ -18,6 +19,11 @@ class User extends ActiveRecordEntity
     public function getPassword(): string
     {
         return $this->password;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public function getCount(): string

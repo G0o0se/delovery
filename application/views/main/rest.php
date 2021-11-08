@@ -37,7 +37,6 @@
         <li><a href="">pizza</a></li>
         <li><a href="">salads</a></li>
         <li><a href="">soups</a></li>
-        <li><a href="">main coursers</a></li>
         <li><a href="">grill menu</a></li>
         <li><a href="">desserts</a></li>
         <li><a href="">drinks</a></li>

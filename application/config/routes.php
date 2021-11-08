@@ -21,6 +21,11 @@ return [
         'action' => 'login',
     ],
 
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout',
+    ],
+
     'account/registration' => [
         'controller' => 'account',
         'action' => 'registration',

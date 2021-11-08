@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8"/>
     <link href="/public/css/style.css" rel="stylesheet" type="text/css"/>
-    <title><?php echo $title?></title>
+    <title><?php echo $title ?></title>
 </head>
-
 
 
 <header>
@@ -23,14 +22,25 @@
         <div class="header-menu-user">
             <div class="menu-user-item">
                 <a href="/account/login">
-                <img alt="" src="/public/img/icon/user.png">
-                <p>My Account</p>
+                    <img alt="" src="/public/img/icon/user.png">
+                </a>
+                    <?php
+                    if (isset($_SESSION['logged_user'])) {
+                        ?> <a href="/account/login"><p>  <?php echo $_SESSION['logged_user']; ?>  </p></a>
+                        <a href="/account/logout" tite="Logout">
+                            <img alt="" src="/public/img/icon/logout.png">
+                        </a>
+                        <?php
+                    } else {
+                        ?> <a href="/account/login"><p> <?php echo 'My account';
+                    }
+                    ?> </p></a>
                 </a>
             </div>
             <div class="menu-user-item">
                 <a href="/shop">
-                <img alt="" src="/public/img/icon/basket.png">
-                <p>My Cart</p>
+                    <img alt="" src="/public/img/icon/basket.png">
+                    <p>My Cart</p>
                 </a>
             </div>
         </div>
