@@ -21,14 +21,14 @@ class User extends ActiveRecordEntity
         return $this->password;
     }
 
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
     public function getCount(): string
     {
         return $this->count;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     protected static function getTableName(): string

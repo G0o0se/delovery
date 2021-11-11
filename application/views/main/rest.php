@@ -45,27 +45,24 @@
 
 <div class="container-rest">
     <div class="name-content">
-        <h1>pasta</h1>
+        <h1>pizza</h1>
     </div>
-    <div class=menu-item>
-        <?php foreach ($goods as $good): ?>
-            <div class="food-main-item">
-                <img alt="steak" class="img-item" src="<?= $good->getImage() ?>">
-                <div class="item-main-info">
-                    <div class="name-item">
-                        <h2><?= $good->getName() ?></h2>
-                        <p><?= $good->getDescription() ?></p>
-                    </div>
-                    <div class="btn-delivery">
-                        <button class="btn-timedelivery2"> 40-50 min</button>
+    <?php foreach ($good as $goods) : ?>
+        <a href="">
+            <div class=food-item-small-img>
+                <img class="img-item" src="">
+                <div class=item-info>
+                    <h2><?= $goods->getName() ?></h2>
+                    <p><?= $goods->getDescription() ?></p>
+                    <div class=item-cost>
+                        <h3>€ <?= $goods->getPrice() ?></h3>
+        </a>
+                        <button class=btn-add></button>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
-    </div>
-    <div class="name-content">
-        <h1>pizza</h1>
-    </div>
+
+    <?php endforeach; ?>
     <div class="menu-item-small">
         <div class=food-item-small-img>
             <img alt="margherita" class="img-item" src=../../../public/img/margherita.jpg>

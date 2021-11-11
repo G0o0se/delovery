@@ -32,13 +32,21 @@
                         </a>
                         <?php
                     } else {
-                        ?> <a href="/account/login"><p> <?php echo 'My account';
+                        ?> <a href="/account/login"><p> <?php echo 'Login';
                     }
                     ?> </p></a>
                 </a>
             </div>
             <div class="menu-user-item">
+                <?php
+                if (isset($_SESSION['logged_user'])) {
+                    ?>
                 <a href="/shop">
+                    <?php
+                } else { ?>
+                    <a href="/account/login">
+                        <?php
+                } ?>
                     <img alt="" src="/public/img/icon/basket.png">
                     <p>My Cart</p>
                 </a>

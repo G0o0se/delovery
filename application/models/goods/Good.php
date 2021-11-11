@@ -6,44 +6,35 @@ use application\models\ActiveRecordEntity;
 
 class Good extends ActiveRecordEntity
 {
+    protected int $id;
     protected string $name;
-    protected string $url;
-    protected string $image;
     protected string $description;
-    protected string $cooking_time;
+    protected float $price;
+    protected int $category;
 
-    /**
-     * @return string
-     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @return string
-     */
-    public function getImage(): string
+    public function getPrice(): float
     {
-        return $this->image;
+        return $this->price;
     }
 
-    public function getUrl(): string
+    public function getCategory(): int
     {
-        return $this->url;
-    }
-
-    public function getCookTime(): string
-    {
-        return $this->cooking_time;
+        return $this->category;
     }
 
     protected static function getTableName(): string

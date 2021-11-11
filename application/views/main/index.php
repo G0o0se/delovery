@@ -26,21 +26,21 @@
 
     </div>
     <div class="menu-main-item">
-        <?php foreach ($goods as $good): ?>
-        <a href="<?= $good->getUrl() ?>">
-            <div class="food-main-item">
-                <img alt="steak" class="img-item" src="<?= $good->getImage() ?>">
-                <div class="item-main-info">
-                    <div class="name-item">
-                        <h2><?= $good->getName() ?></h2>
-                        <p><?= $good->getDescription() ?></p>
-                    </div>
-                    <div class="btn-delivery">
-                        <button class="btn-timedelivery2"> <?= $good->getCookTime() ?> min</button>
+        <?php foreach ($category as $categories) : ?>
+            <a href="rest/<?=$categories->getUrl();?>">
+                <div class="food-main-item">
+                    <img alt="steak" class="img-item" src="<?= $categories->getImage() ?>">
+                    <div class="item-main-info">
+                        <div class="name-item">
+                            <h2><?= $categories->getName() ?></h2>
+                            <p><?= $categories->getCountry() ?></p>
+                        </div>
+                        <div class="btn-delivery">
+                            <button class="btn-timedelivery2"> <?= $categories->getCookTime() ?> min</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
         <?php endforeach; ?>
     </div>
 

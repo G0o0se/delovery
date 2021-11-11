@@ -7,7 +7,7 @@ use application\lib\Db;
 abstract class ActiveRecordEntity
 {
     /** @var int */
-    protected $id;
+    protected int $id;
     protected string $email;
 
     /**

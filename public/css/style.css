@@ -177,7 +177,7 @@ header {
 .header-menu-user {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 320px;
     width: 100%;
 }
