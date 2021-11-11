@@ -38,6 +38,15 @@ abstract class ActiveRecordEntity
         return $db->query('SELECT * FROM `' . static::getTableName() . '`;', [], static::class);
     }
 
+    public static function FindByCategory(string $category): array
+    {
+        $db = new Db();
+        return $db->query(
+            'SELECT * FROM `' . static::getTableName() . '` WHERE category=:category;',
+            [':category' => $category],
+            static::class
+        );
+    }
 
     public static function NameByEmail(string $email): ?self
     {

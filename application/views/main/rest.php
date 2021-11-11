@@ -32,86 +32,39 @@
 </div>
 
 <div class="cont-menu">
+
     <ul class="menu-shop">
-        <li class="active"><a class="item-shop" href="">pasta</a></li>
-        <li><a href="">pizza</a></li>
-        <li><a href="">salads</a></li>
-        <li><a href="">soups</a></li>
-        <li><a href="">grill menu</a></li>
-        <li><a href="">desserts</a></li>
-        <li><a href="">drinks</a></li>
+        <?php foreach ($category as $categories) :
+            if ($categories->getName() == mb_strimwidth($_SERVER['REQUEST_URI'], 6, 10)) { ?>
+        <li class="active"><a class="item-shop" href="<?= $categories->getUrl() ?>"><?= $categories->getName() ?></a></li>
+            <?php  } else { ?>
+        <li><a class="item-shop" href="<?= $categories->getUrl() ?>"><?= $categories->getName() ?></a></li>
+            <?php } ?>
+        <?php endforeach; ?>
     </ul>
 </div>
 
+
 <div class="container-rest">
     <div class="name-content">
-        <h1>pizza</h1>
+        <h1 id="name"></h1>
     </div>
+    <div class="menu-main-item">
     <?php foreach ($good as $goods) : ?>
         <a href="">
             <div class=food-item-small-img>
-                <img class="img-item" src="">
+                <img class="img-item" src="<?= $goods->getImage() ?>">
                 <div class=item-info>
                     <h2><?= $goods->getName() ?></h2>
                     <p><?= $goods->getDescription() ?></p>
                     <div class=item-cost>
                         <h3>€ <?= $goods->getPrice() ?></h3>
-        </a>
                         <button class=btn-add></button>
                     </div>
                 </div>
             </div>
-
+        </a>
     <?php endforeach; ?>
-    <div class="menu-item-small">
-        <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=../../../public/img/margherita.jpg>
-            <div class=item-info>
-                <h2>margherita</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€12.00</h3>
-                    <button class=btn-add></button>
-                </div>
-            </div>
-        </div>
-        <div class=food-item-small-img>
-            <img alt="margherita" class="img-item" src=../../../public/img/margherita.jpg>
-            <div class=item-info>
-                <h2>margherita</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€12.00</h3>
-                    <button class=btn-add></button>
-                </div>
-            </div>
-        </div>
-        <div class=food-item-small>
-            <div class=item-info-small>
-                <h2>4 cheeses</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€10.00</h3>
-                    <button class=btn-add></button>
-                </div>
-            </div>
-            <div class=item-info-small>
-                <h2>neapolitan pizza</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€11.00</h3>
-                    <button class=btn-add></button>
-                </div>
-            </div>
-            <div class=item-info-small>
-                <h2>pepperoni</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam erat</p>
-                <div class=item-cost>
-                    <h3>€11.00</h3>
-                    <button class=btn-add></button>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
