@@ -186,7 +186,7 @@ header {
     width: 100%;
 }
 
-.menu-user-item{
+.menu-user-item {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -217,7 +217,7 @@ header {
     transition: all 0.4s;
 }
 
-.account-block{
+.account-block {
     position: relative;
     padding-top: 50px;
     background-color: #fff;
@@ -1525,4 +1525,67 @@ footer {
     border: 1px solid #a33a3a;
     max-width: 400px;
     border-radius: 10px;
+}
+
+.update {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.update-class {
+    margin: 25px auto;
+    max-width: 350px;
+}
+
+.admin{
+    margin: 50px 0;
+}
+
+.admin-change{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 1000px;
+    margin: auto;
+}
+
+.goods-search{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+input[value="SEARCH"]{
+    font-size: 13px;
+}
+
+.input-form{
+    border-radius: 10px;
+    border: 2px solid #d6ece9;
+    padding: 5px;
+}
+
+.search-menu{
+    margin: auto;
+}
+
+.search-admin{
+    background:#dc9678;
+    color:#fff;
+    border:1px solid #eee;
+    border-radius:20px;
+    text-shadow:none;
+}
+
+.goods{
+    text-align: center;
+    width: 95%;
+    margin: 50px auto auto;
+}
+
+.goods td{
+   max-width: 250px;
+   margin: auto;
 }

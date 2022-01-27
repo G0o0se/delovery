@@ -350,81 +350,22 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class=title-lk>
-    <h1>extra shop</h1>
 </div>
-<div class="container-rest">
-    <ul class="menu-shop">
-        <li class="active"><a class="item-shop" href="">pasta</a></li>
-        <li><a href="">pizza</a></li>
-        <li><a href="">salads</a></li>
-        <li><a href="">soups</a></li>
-        <li><a href="">main coursers</a></li>
-        <li><a href="">grill menu</a></li>
-        <li><a href="">desserts</a></li>
-        <li><a href="">drinks</a></li>
-    </ul>
-    <div class="menu">
-        <div class="menu-item">
-            <div class="food-item"><img class="img-item" src="../../../public/img/pestopasta.jpg" alt="pestopasta">
-                <div class="item-info">
-                    <h2>Pesto pasta</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
-                        erat</p>
-                    <div class="item-cost">
-                        <h3>€7.00</h3>
-                        <button class="btn-add"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-item">
-                <img class="img-item" src="../../../public/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
-                <div class="item-info">
-                    <h2>creamy bacon carbonara</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
-                        erat</p>
-                    <div class="item-cost">
-                        <h3>€10.00</h3>
-                        <button class="btn-add"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-item">
-                <img class="img-item" src="../../../public/img/creamybaconcarbonara.jpg" alt="creamybaconcarbonara">
-                <div class="item-info">
-                    <h2>Penne pasta</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
-                        erat</p>
-                    <div class="item-cost">
-                        <h3>€8.00</h3>
-                        <button class="btn-add"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-item">
-                <div class="item-info-small">
-                    <h2>4 cheeses</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
-                        erat</p>
-                    <div class="item-cost">
-                        <h3>€10.00</h3>
-                        <button class="btn-add"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="food-item">
-                <div class="item-info-small">
-                    <h2>4 cheeses</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet feugiat sem. Aliquam
-                        erat</p>
-                    <div class="item-cost">
-                        <h3>€10.00</h3>
-                        <button class="btn-add"></button>
-                    </div>
-                </div>
+<div id="app">
+    <nav class="navbar navbar-light bg-white border-bottom sticky-top">
+        <div class="container">
+            <div class="navbar-nav">
+                <a class="nav-link p-0" href="#">
+                    <cart-button/>
+                </a>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <main>
+        <product-list></product-list>
+    </main>
+
+    <cart-modal></cart-modal>
 </div>

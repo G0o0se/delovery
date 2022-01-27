@@ -36,6 +36,16 @@ return [
         'action' => 'rest',
     ],
 
+    'admin/goods' => [
+        'controller' => 'admin',
+        'action' => 'goods',
+    ],
+
+    'admin/goods/update' => [
+        'controller' => 'admin',
+        'action' => 'update',
+    ],
+
     'shop' => [
         'controller' => 'main',
         'action' => 'shop',

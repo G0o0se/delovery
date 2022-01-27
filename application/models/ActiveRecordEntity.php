@@ -77,7 +77,7 @@ abstract class ActiveRecordEntity
     public static function getByLogin(string $email, string $password): ?self
     {
         $db = new Db();
-        $entities = $db-> query(
+        $entities = $db->query(
             "SELECT count(*) as count FROM `" . static::getTableName() . "` WHERE email = :email and password = :password;",
             [':email' => $email, ':password' => $password],
             static::class
@@ -88,12 +88,64 @@ abstract class ActiveRecordEntity
     public static function AddUser(string $name, string $email, string $password): ?self
     {
         $db = new Db();
-        $entities = $db-> query(
-            "INSERT INTO `" . static::getTableName() . "` (name, email, password) values( :name, :email, :password);",
+        $entities = $db->query(
+            "INSERT INTO `" . static::getTableName() . "` (name, email, password) values (:name, :email, :password);",
             [':name' => $name, ':email' => $email, ':password' => $password],
             static::class
         );
         return $entities ? $entities[0] : null;
+    }
+
+    public static function AddGood(string $name, float $price, string $description, string $category, string $image): ?self
+    {
+        $db = new Db();
+        $entities = $db->query(
+            "INSERT INTO `" . static::getTableName() . "` (name, price, description, category, image) values (:name, :price, :description, :category, :image);",
+            [':name' => $name, ':price' => $price, ':description' => $description, ':category' => $category, ':image' => $image],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function deleteById(int $id): ?self
+    {
+        $db = new Db();
+        $entities = $db->query(
+            "DELETE FROM `" . static::getTableName() . "` WHERE id = :id;",
+            [':id' => $id],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function updateById(string $name, string $description, float $price, string $category, string $image, int $id): array
+    {
+        $db = new Db();
+        return $db->query(
+            'UPDATE goods SET name = :name, description = :description, price = :price, category= :category, image= :image WHERE id = :id;',
+            [':name' => $name, ':description' => $description, ':price' => $price, ':category' => $category, ':image' => $image, ':id' => $id],
+            static::class
+        );
+    }
+
+    public static function findById(int $id): array
+    {
+        $db = new Db();
+        return $db->query(
+            "SELECT * FROM `" . static::getTableName() . "` WHERE id = :id;",
+            [':id' => $id],
+            static::class
+        );
+    }
+
+    public static function search(string $search): array
+    {
+        $db = new Db();
+        return $db->query(
+            "SELECT * FROM `" . static::getTableName() . "` WHERE description LIKE '%$search%' or name LIKE '%$search%' or price LIKE '%$search%' or category LIKE '%$search%';",
+            [':search' => $search],
+            static::class
+        );
     }
 
     abstract protected static function getTableName(): string;
