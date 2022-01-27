@@ -177,12 +177,18 @@ header {
 .header-menu-user {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    max-width: 250px;
+    justify-content: space-evenly;
+    max-width: 320px;
     width: 100%;
 }
 
-.menu-user-item a{
+.menu-user-item{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu-user-item a {
     display: flex;
     flex-direction: row;
     user-select: none;
@@ -199,12 +205,21 @@ header {
     color: #174040;
     font-size: 16px;
     font-weight: 400;
-    padding-left: 8px;
+    margin: 0 10px;
 }
 
 .menu-user-item p:hover {
     color: #dc9678;
     transition: all 0.4s;
+}
+
+.account-block{
+    position: relative;
+    padding-top: 50px;
+    background-color: #fff;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: calc(100vh - 205px);
 }
 
 .content-block {
@@ -215,13 +230,13 @@ header {
     margin: 0 auto;
 }
 
-.content-block .link-login-panel {
+.account-block .link-login-panel {
     text-align: center;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 22px;
 }
 
-.content-block .link-item-login {
+.account-block .link-item-login {
     color: #a7b0b0;
     font-family: "Ariq", sans-serif;
     letter-spacing: 4px;
@@ -231,33 +246,19 @@ header {
     position: relative;
 }
 
-.content-block .link-item-login :hover,
-.content-block .link-item-login.active {
+.account-block .link-item-login :hover,
+.account-block .link-item-login.active {
     color: #65c6bb;
 }
 
-.content-block .link-item-login :first-child {
+.account-block .link-item-login :first-child {
     border-right: 1px solid #e0f4f1;
-}
-
-.active-phone {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-.active-phone h3 {
-    color: #174040;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
 }
 
 .form-auth {
     position: relative;
     max-width: 370px;
-    margin: 0 auto;
+    margin: 22px auto 0 auto;
     padding-bottom: 100px;
 }
 
@@ -397,7 +398,7 @@ header {
     margin-right: 30px;
 }
 
-#rest{
+#rest {
     width: 68%;
 }
 
@@ -595,7 +596,8 @@ textarea {
 
 .name-content h1 {
     text-align: center;
-    padding-top: 95px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     margin: 0;
 }
 
@@ -927,7 +929,7 @@ textarea {
     display: flex;
     margin: auto;
     justify-content: center;
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 .menu-main-item p {
@@ -966,6 +968,7 @@ textarea {
     font-size: 16px;
     line-height: 15px;
     margin: 0;
+    max-width: 220px;
 }
 
 .btn-timedelivery,
@@ -1392,7 +1395,7 @@ footer {
     font-size: 18px;
 }
 
-.popup{
+.popup {
     display: none;
 }
 
@@ -1497,4 +1500,17 @@ footer {
 .quan-food-popup img {
     width: 6px;
     height: 11px;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    color: #ba3939;
+    background: #ffe0e0;
+    border: 1px solid #a33a3a;
+    max-width: 400px;
+    border-radius: 10px;
 }

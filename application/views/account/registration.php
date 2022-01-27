@@ -1,38 +1,42 @@
-<div class="content-block">
+<div class="account-block">
     <div class="link-login-panel">
         <a class="link-item-login" href="login">login</a>
         <a class="link-item-login active" href="">register</a>
     </div>
-    <div class="active-phone">
-        <h3>Please, confirm your phone number to complete registration</h3>
-    </div>
-    <div class="form-auth">
-        <div class="input-block">
-            <label>
-                first name
-                <input class="input-form" placeholder="Enter your first name" type="text"/>
-            </label>
+    <?php if(isset($err)){ ?>
+        <div class="error">
+            <?php echo $err; ?>
         </div>
-        <div class="input-block">
-            <label>
-                Last name
-                <input class="input-form" placeholder="Enter your last name" type="text"/>
-            </label>
+    <?php } ?>
+    <form action="registration" method="post">
+        <div class="form-auth">
+           <div class="input-block">
+                <label>
+                    Name
+                    <input class="input-form" name="name" placeholder="Enter your first and second name" type="text"/>
+                </label>
+            </div>
+            <div class="input-block">
+                <label>
+                    Email
+                    <input class="input-form" name="email" placeholder="Enter your Email" type="email"/>
+                </label>
+            </div>
+            <div class="input-block">
+                <label>
+                    Password
+                    <input class="input-form" name="password" placeholder="***********" type="password"/>
+                </label>
+            </div>
+            <div class="input-block">
+                <label>
+                    Accept password
+                    <input class="input-form" name="accpassword" placeholder="***********" type="password"/>
+                </label>
+            </div>
+            <div class="accept-btn">
+                <button type="submit" name="submit" class="btn-send">Registration</button>
+            </div>
         </div>
-        <div class="input-block">
-            <label>
-                Email
-                <input class="input-form" placeholder="Enter your Email" type="email"/>
-            </label>
-        </div>
-        <div class="input-block">
-            <label>
-                phone number
-                <input class="input-form" placeholder="+3 (- - -) - - - - - - - - -" type="text"/>
-            </label>
-        </div>
-        <div class="accept-btn">
-            <button class="btn-send">next step</button>
-        </div>
-    </div>
+    </form>
 </div>

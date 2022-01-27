@@ -3,17 +3,21 @@
 namespace application\controllers;
 
 use application\core\Controller;
+use application\models\categories\Category;
+use application\models\goods\Good;
 
 class MainController extends Controller
 {
     public function indexAction()
     {
-        $this->view->render('Главная');
+        $categories = Category::findAll();
+        $this->view->render('Главная', ['category' => $categories]);
     }
 
     public function restAction()
     {
-        $this->view->render('Товары');
+        $goods = Good::findAll();
+        $this->view->render('Товары', ['good' => $goods]);
     }
 
     public function shopAction()

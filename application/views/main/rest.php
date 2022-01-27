@@ -37,7 +37,6 @@
         <li><a href="">pizza</a></li>
         <li><a href="">salads</a></li>
         <li><a href="">soups</a></li>
-        <li><a href="">main coursers</a></li>
         <li><a href="">grill menu</a></li>
         <li><a href="">desserts</a></li>
         <li><a href="">drinks</a></li>
@@ -46,13 +45,24 @@
 
 <div class="container-rest">
     <div class="name-content">
-        <h1>pasta</h1>
-    </div>
-    <div class=menu-item>
-    </div>
-    <div class="name-content">
         <h1>pizza</h1>
     </div>
+    <?php foreach ($good as $goods) : ?>
+        <a href="">
+            <div class=food-item-small-img>
+                <img class="img-item" src="">
+                <div class=item-info>
+                    <h2><?= $goods->getName() ?></h2>
+                    <p><?= $goods->getDescription() ?></p>
+                    <div class=item-cost>
+                        <h3>€ <?= $goods->getPrice() ?></h3>
+        </a>
+                        <button class=btn-add></button>
+                    </div>
+                </div>
+            </div>
+
+    <?php endforeach; ?>
     <div class="menu-item-small">
         <div class=food-item-small-img>
             <img alt="margherita" class="img-item" src=../../../public/img/margherita.jpg>

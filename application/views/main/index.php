@@ -21,81 +21,27 @@
     </div>
 
     <div class="name-content">
-        <h1>type 1</h1>
+        <h1>Categories</h1>
+    </div>
+
     </div>
     <div class="menu-main-item">
-        <div class="food-main-item">
-            <img alt="steak" class="img-item" src="/public/img/steak.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Beef bar</h2>
-                    <p>Meat, grill</p>
+        <?php foreach ($category as $categories) : ?>
+            <a href="rest/<?=$categories->getUrl();?>">
+                <div class="food-main-item">
+                    <img alt="steak" class="img-item" src="<?= $categories->getImage() ?>">
+                    <div class="item-main-info">
+                        <div class="name-item">
+                            <h2><?= $categories->getName() ?></h2>
+                            <p><?= $categories->getCountry() ?></p>
+                        </div>
+                        <div class="btn-delivery">
+                            <button class="btn-timedelivery2"> <?= $categories->getCookTime() ?> min</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery2"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="/public/img/tacos.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Tacos</h2>
-                    <p>Mexican</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="pizza" class="img-item" src="/public/img/pizza.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Spezzo</h2>
-                    <p>Italian, pizza</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery2"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="taverna" class="img-item" src="/public/img/taverna.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>taverna</h2>
-                    <p>Greek, seafood</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="/public/img/steak.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Beef bar</h2>
-                    <p>Meat, grill</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery2"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
-        <div class="food-main-item">
-            <img alt="tacos" class="img-item" src="/public/img/tacos.jpg">
-            <div class="item-main-info">
-                <div class="name-item">
-                    <h2>Tacos</h2>
-                    <p>Mexican</p>
-                </div>
-                <div class="btn-delivery">
-                    <button class="btn-timedelivery"> 40-50 min</button>
-                </div>
-            </div>
-        </div>
+            </a>
+        <?php endforeach; ?>
     </div>
 
     <div class="container-news">
@@ -108,7 +54,7 @@
                     </div>
                     <div class="info-news">
                         <div class="time-news">
-                            5/03/2020</div>
+                            5/03/2021</div>
                         <div class="name-news">
                             <h3><a>lorem ipsum dolor sit amet</a></h3>
                         </div>
@@ -126,7 +72,7 @@
                     </div>
                     <div class="info-news">
                         <div class="time-news">
-                            5/03/2020</div>
+                            5/03/2021</div>
                         <div class="name-news">
                             <h3><a>lorem ipsum dolor sit amet</a></h3></div>
                         <div class="text-news">
@@ -143,7 +89,7 @@
                     </div>
                     <div class="info-news">
                         <div class="time-news">
-                            5/03/2020</div>
+                            5/03/2021</div>
                         <div class="name-news">
                             <h3><a>lorem ipsum dolor sit amet</a></h3></div>
                         <div class="text-news">

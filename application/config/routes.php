@@ -6,7 +6,32 @@ return [
         'action' => 'index',
     ],
 
-    'rest' => [
+    'rest/dessert' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/grillmenu' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/soup' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/salad' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/pizza' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/pasta' => [
         'controller' => 'main',
         'action' => 'rest',
     ],
@@ -19,6 +44,11 @@ return [
     'account/login' => [
         'controller' => 'account',
         'action' => 'login',
+    ],
+
+    'account/logout' => [
+        'controller' => 'account',
+        'action' => 'logout',
     ],
 
     'account/registration' => [
