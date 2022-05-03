@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'dbname' => 'horbenko_db',
+    'dbname' => 'delovery',
     'user' => 'root',
-    'password' => 'root',
+    'password' => '',
 ];
