@@ -48,9 +48,7 @@ CREATE TABLE IF NOT EXISTS `delovery`.`goods` (
   INDEX `fk_goods_categories1_idx` (`categories_id` ASC) VISIBLE,
   CONSTRAINT `fk_goods_categories1`
     FOREIGN KEY (`categories_id`)
-    REFERENCES `delovery`.`categories` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `delovery`.`categories` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -79,7 +77,10 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `delovery`.`order` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
-  `goods_order_id` INT NOT NULL,
+  `date` DATETIME NULL,
+  `price` DECIMAL NULL,
+  `quantity` DECIMAL NULL,
+  `status` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_order_user_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_order_user`

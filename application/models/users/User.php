@@ -6,10 +6,20 @@ use application\models\ActiveRecordEntity;
 
 class User extends ActiveRecordEntity
 {
+    public string $name;
+    protected string $surname;
     protected string $email;
     protected string $password;
-    public string $count;
-    public string $name;
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getSurname(): string
+    {
+        return $this->surname;
+    }
 
     public function getEmail(): string
     {
@@ -21,18 +31,8 @@ class User extends ActiveRecordEntity
         return $this->password;
     }
 
-    public function getCount(): string
-    {
-        return $this->count;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
     protected static function getTableName(): string
     {
-        return 'user';
+        return 'users';
     }
 }

@@ -8,8 +8,10 @@ class Order extends ActiveRecordEntity
 {
     protected int $id;
     protected int $user_id;
-    protected int $order_id;
-    protected int $status;
+    protected string $date;
+    protected int $price;
+    protected int $quantity;
+    protected string $status;
 
     public function getId(): int
     {
@@ -21,12 +23,22 @@ class Order extends ActiveRecordEntity
         return $this->user_id;
     }
 
-    public function getOrderId(): int
+    public function getDate(): string
     {
-        return $this->order_id;
+        return $this->date;
     }
 
-    public function getStatus(): int
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    public function getPrice(): int
+    {
+        return $this->price;
+    }
+
+    public function getStatus(): string
     {
         return $this->status;
     }
