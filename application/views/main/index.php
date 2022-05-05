@@ -7,7 +7,7 @@
                     <input placeholder="Enter the type of food..." type="text"/>
                     <button class="btn-search">search</button>
             </div>
-            <div class="btn-media">
+           <div class="btn-media">
                 <div class="btn-container" id="main-btn">
                     <div class="btn-rest">
                         <button class="btn-time" id="main-time">delivery time</button>
@@ -23,8 +23,8 @@
     <div class="name-content">
         <h1>Categories</h1>
     </div>
-
     </div>
+
     <div class="menu-main-item">
         <?php foreach ($category as $categories) : ?>
             <a href="rest/<?=$categories->getUrl();?>">

@@ -16,8 +16,9 @@ class MainController extends Controller
 
     public function restAction()
     {
-        $goods = Good::findAll();
-        $this->view->render('Товары', ['good' => $goods]);
+        $goods = Good::FindByCategory(mb_strimwidth($_SERVER['REQUEST_URI'], 6, 10));
+        $categories = Category::findAll();
+        $this->view->render('Товары', ['goods' => $goods, 'category' => $categories]);
     }
 
     public function shopAction()

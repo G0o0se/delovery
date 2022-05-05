@@ -26,7 +26,7 @@
                 </a>
                     <?php
                     if (isset($_SESSION['logged_user'])) {
-                        ?> <a href="/account/login"><p>  <?php echo $_SESSION['logged_user']; ?>  </p></a>
+                        ?> <a href="/admin/goods"><p>  <?php echo $_SESSION['logged_user']; ?>  </p></a>
                         <a href="/account/logout" tite="Logout">
                             <img alt="" src="/public/img/icon/logout.png">
                         </a>
@@ -61,6 +61,7 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/public/js/popup.js" type="text/javascript"></script>
+<script src="public/js/main.js"></script>
 
 <footer>
     <ul class="footer-menu">
@@ -74,4 +75,5 @@
 </footer>
 
 </body>
+
 </html>
