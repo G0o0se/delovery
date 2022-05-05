@@ -23,8 +23,8 @@
     <div class="name-content">
         <h1>Categories</h1>
     </div>
-
     </div>
+
     <div class="menu-main-item">
         <?php foreach ($category as $categories) : ?>
             <a href="rest/<?=$categories->getUrl();?>">

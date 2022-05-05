@@ -9933,7 +9933,7 @@
 
             var data = me._data;
 
-            // In the case where active.length === 0 we need to keep these at existing values for good animations
+            // In the case where active.length === 0 we need to keep these at existing values for goods animations
             var alignment = {
                 xAlign: existingModel.xAlign,
                 yAlign: existingModel.yAlign
@@ -13602,7 +13602,7 @@
                 }
             }
 
-            // Value is good, return it
+            // Value is goods, return it
             return rawValue;
         },
 
@@ -14657,7 +14657,7 @@
             if ( setMin !== setMax )
             {
                 // We set the min or the max but not both.
-                // So ensure that our range is good
+                // So ensure that our range is goods
                 // Inverted or 0 length range can happen when
                 // ticks.min is set, and no datasets are visible
                 if ( me.min >= me.max )

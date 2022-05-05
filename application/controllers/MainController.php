@@ -18,7 +18,7 @@ class MainController extends Controller
     {
         $goods = Good::FindByCategory(mb_strimwidth($_SERVER['REQUEST_URI'], 6, 10));
         $categories = Category::findAll();
-        $this->view->render('Товары', ['good' => $goods, 'category' => $categories]);
+        $this->view->render('Товары', ['goods' => $goods, 'category' => $categories]);
     }
 
     public function shopAction()

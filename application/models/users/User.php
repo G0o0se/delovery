@@ -33,6 +33,6 @@ class User extends ActiveRecordEntity
 
     protected static function getTableName(): string
     {
-        return 'users';
+        return 'user';
     }
 }

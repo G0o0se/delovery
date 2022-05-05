@@ -28,7 +28,7 @@
                 <td><button style="width: 100px;" name="add" type="submit" class="btn-send">add</button></td>
             </form>
         </tr>
-        <?php foreach ($good as $goods) : ?>
+        <?php foreach ($goods as $goods) : ?>
             <tr>
                 <?php $id = $goods->getId(); ?>
                 <td><?= $goods->getName() ?></td>

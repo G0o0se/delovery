@@ -11,7 +11,7 @@ class Category extends ActiveRecordEntity
     protected string $url;
     protected string $image;
     protected string $country;
-    protected string $cook_time;
+    protected string $cookTime;
 
     public function getId(): int
     {
@@ -40,7 +40,7 @@ class Category extends ActiveRecordEntity
 
     public function getCookTime(): string
     {
-        return $this->cook_time;
+        return $this->cookTime;
     }
 
     protected static function getTableName(): string

@@ -4088,7 +4088,7 @@
 
                 firing = false;
 
-                // Clean up if we're done firing for good
+                // Clean up if we're done firing for goods
                 if ( locked )
                 {
 

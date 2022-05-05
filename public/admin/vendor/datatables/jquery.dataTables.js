@@ -7068,7 +7068,7 @@
 
     /**
      * Bind an event handers to allow a click or return key to activate the callback.
-     * This is good for accessibility since a return on the keyboard will have the
+     * This is goods for accessibility since a return on the keyboard will have the
      * same effect as a click, if the element has focus.
      *  @param {element} n Element to bind the action to
      *  @param {object} oData Data object to pass to the triggered function
@@ -10278,7 +10278,7 @@
 
                 // If the were originally stripe classes - then we add them back here.
                 // Note this is not fool proof (for example if not all rows had stripe
-                // classes - but it's a good effort without getting carried away
+                // classes - but it's a goods effort without getting carried away
                 ien = settings.asDestroyStripes.length;
 
                 if ( ien )
@@ -15549,7 +15549,7 @@
                 };
 
                 // IE9 throws an 'unknown error' if document.activeElement is used
-                // inside an iframe or frame. Try / catch the error. Not good for
+                // inside an iframe or frame. Try / catch the error. Not goods for
                 // accessibility, but neither are frames.
                 var activeEl;
 
@@ -15965,7 +15965,7 @@
 
 
     /*
-	 * This is really a good bit rubbish this method of exposing the internal methods
+	 * This is really a goods bit rubbish this method of exposing the internal methods
 	 * publicly... - To be fixed in 2.0 using methods on the prototype
 	 */
 

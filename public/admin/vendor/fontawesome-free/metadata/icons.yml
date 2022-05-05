@@ -4740,7 +4740,7 @@ cookie:
   label: Cookie
   search:
     terms:
-      - baked good
+      - baked goods
       - chips
       - chocolate
       - eat
@@ -4757,7 +4757,7 @@ cookie-bite:
   label: Cookie Bite
   search:
     terms:
-      - baked good
+      - baked goods
       - bitten
       - chips
       - chocolate

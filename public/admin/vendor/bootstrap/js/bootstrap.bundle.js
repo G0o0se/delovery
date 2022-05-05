@@ -2542,7 +2542,7 @@
             }
             else
             {
-                // for all the other DOM elements, this one is good
+                // for all the other DOM elements, this one is goods
                 boundaries = offsets;
             }
         }
@@ -3170,7 +3170,7 @@
      * @returns {Object} The popper's position offsets rounded
      *
      * The tale of pixel-perfect positioning. It's still not 100% perfect, but as
-     * good as it can be within reason.
+     * goods as it can be within reason.
      * Discussion here: https://github.com/FezVrasta/popper.js/pull/715
      *
      * Low DPI screens cause a popper to be blurry if not using full pixels (Safari

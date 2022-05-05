@@ -32,7 +32,7 @@ class AdminController extends Controller
             Good::AddGood($name, $price, $description, $category, $image);
             header('Location: /admin/goods');
         }
-        $this->view->render('Admin', ['good' => $goods]);
+        $this->view->render('Admin', ['goods' => $goods]);
     }
 
     public function updateAction()
@@ -52,6 +52,6 @@ class AdminController extends Controller
             Good::updateById($name, $description, $price, $category, $image, $id);
             header('Location: /admin/goods');
         }
-        $this->view->render('Edit good', ['good' => $goods]);
+        $this->view->render('Edit goods', ['goods' => $goods]);
     }
 }
