@@ -42,7 +42,7 @@ abstract class ActiveRecordEntity
     {
         $db = new Db();
         return $db->query(
-            'SELECT * FROM `' . static::getTableName() . '` WHERE category=:category;',
+            'SELECT goods.name, goods.image, goods.price, goods.description FROM `' . static::getTableName() . '` JOIN categories c on `' . static::getTableName() . '`.category = c.name WHERE c.url=:category;',
             [':category' => $category],
             static::class
         );
@@ -96,12 +96,23 @@ abstract class ActiveRecordEntity
         return $entities ? $entities[0] : null;
     }
 
-    public static function AddGood(string $name, float $price, string $description, string $category, string $image): ?self
+    public static function AddGood(string $name, int $price, string $description, string $category, string $image): ?self
     {
         $db = new Db();
         $entities = $db->query(
             "INSERT INTO `" . static::getTableName() . "` (name, price, description, category, image) values (:name, :price, :description, :category, :image);",
             [':name' => $name, ':price' => $price, ':description' => $description, ':category' => $category, ':image' => $image],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function AddCategory(string $name, string $description, string $category, string $image): ?self
+    {
+        $db = new Db();
+        $entities = $db->query(
+            "INSERT INTO `" . static::getTableName() . "` (name,description, category, image) values (:name, :description, :category, :image);",
+            [':name' => $name, ':description' => $description, ':category' => $category, ':image' => $image],
             static::class
         );
         return $entities ? $entities[0] : null;

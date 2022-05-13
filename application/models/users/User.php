@@ -6,10 +6,12 @@ use application\models\ActiveRecordEntity;
 
 class User extends ActiveRecordEntity
 {
+    public int $id;
     public string $name;
     protected string $surname;
     protected string $email;
     protected string $password;
+    protected int $is_admin;
 
     public function getName(): string
     {
@@ -29,6 +31,11 @@ class User extends ActiveRecordEntity
     public function getPassword(): string
     {
         return $this->password;
+    }
+
+    public function getAdmin(): string
+    {
+        return $this->is_admin;
     }
 
     protected static function getTableName(): string

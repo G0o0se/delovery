@@ -9,9 +9,9 @@ class Good extends ActiveRecordEntity
     protected int $id;
     protected string $name;
     protected string $description;
-    protected float $price;
+    protected int $price;
     protected string $image;
-    protected string $category_id;
+    protected string $category;
 
     public function getId(): int
     {
@@ -28,7 +28,7 @@ class Good extends ActiveRecordEntity
         return $this->description;
     }
 
-    public function getPrice(): float
+    public function getPrice(): int
     {
         return $this->price;
     }
@@ -40,7 +40,7 @@ class Good extends ActiveRecordEntity
 
     public function getCategory(): string
     {
-        return $this->category_id;
+        return $this->category;
     }
 
     protected static function getTableName(): string

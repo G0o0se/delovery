@@ -1,20 +1,25 @@
 <?php
 
-namespace application\models\categories;
+namespace application\models\news;
 
 use application\models\ActiveRecordEntity;
 
-class Category extends ActiveRecordEntity
+class News extends ActiveRecordEntity
 {
     protected int $id;
+    protected string $date;
     protected string $name;
-    protected string $url;
+    protected string $description;
     protected string $image;
-    protected string $cookTime;
 
     public function getId(): int
     {
         return $this->id;
+    }
+
+    public function getDate(): string
+    {
+        return $this->date;
     }
 
     public function getName(): string
@@ -22,9 +27,9 @@ class Category extends ActiveRecordEntity
         return $this->name;
     }
 
-    public function getUrl(): string
+    public function getDescription(): string
     {
-        return $this->url;
+        return $this->description;
     }
 
     public function getImage(): string
@@ -32,13 +37,8 @@ class Category extends ActiveRecordEntity
         return $this->image;
     }
 
-    public function getCookTime(): string
-    {
-        return $this->cookTime;
-    }
-
     protected static function getTableName(): string
     {
-        return 'categories';
+        return 'news';
     }
 }

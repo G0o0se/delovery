@@ -71,7 +71,7 @@ input[type="radio"] {
     font-weight: 500;
     text-transform: uppercase;
     display: block;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 0;
 }
 
@@ -123,6 +123,7 @@ input[type="checkbox"]:checked + label:before {
 
 html {
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 body {
@@ -196,7 +197,7 @@ header {
     display: flex;
     flex-direction: row;
     user-select: none;
-    line-height: 35px;
+    line-height: 24px;
     margin: auto 0;
 }
 
@@ -223,7 +224,6 @@ header {
     background-color: #fff;
     max-width: 1170px;
     margin: 0 auto;
-    height: calc(100vh - 205px);
 }
 
 .content-block {
@@ -243,7 +243,7 @@ header {
 .account-block .link-item-login {
     color: #a7b0b0;
     font-family: "Ariq", sans-serif;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-size: 20px;
     text-transform: uppercase;
     padding: 0 30px;
@@ -262,7 +262,7 @@ header {
 .form-auth {
     position: relative;
     max-width: 370px;
-    margin: 22px auto 0 auto;
+    margin: 40px auto 0 auto;
     padding-bottom: 100px;
 }
 
@@ -278,7 +278,7 @@ header {
 .input-block .input-form {
     border: 0;
     border-bottom: 1px solid #65c6bb;
-    height: 42px;
+    height: 28px;
     font-size: 16px;
     color: #174040;
     margin-bottom: 30px;
@@ -322,7 +322,7 @@ header {
 }
 
 .btn-code {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     width: 150px;
 }
 
@@ -375,14 +375,14 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-}
+    margin-bottom: 50px;}
 
 .search-rest {
-    padding: 47px 0 77px;
+    padding: 45px 0 45px;
     background-color: #fff;
 }
 
-.search-btns {
+.search-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -422,14 +422,13 @@ header {
     margin-left: 15px;
 }
 
-.btn-rest button,
 .search-menu button {
     color: #fff;
     font-size: 13px;
     font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .search-menu button {
@@ -446,41 +445,15 @@ header {
     font-weight: 700;
 }
 
-.btn-media {
-    display: flex;
-    flex-direction: row;
-}
-
-.btn-container {
-    display: flex;
-    margin: auto;
-}
-
-.btn-rest {
-    display: flex;
-    flex-direction: initial;
-    justify-content: initial;
-}
-
-.btn-rest button {
-    border: 0;
-}
-
 .btn-book {
     width: 215px;
     background-color: #c89650;
 }
 
 .btn-book,
-.btn-info,
-.btn-time {
+.btn-info{
     height: 50px;
     border-radius: 25px;
-}
-
-.btn-time {
-    width: 230px;
-    background-color: #dc9678;
 }
 
 .btn-info {
@@ -488,25 +461,15 @@ header {
     background-color: #78826e;
 }
 
-.btn-filters {
-    width: 170px;
-    height: 50px;
-    border-radius: 28px;
-    background-color: #c89650;
-    display: none;
-}
-
 #main-filters {
     display: inline;
 }
 
 .btn-book img,
-.btn-filters img,
 .btn-time img {
     padding-right: 15px;
 }
 
-.btn-filters,
 .btn-time {
     margin: 0 10px;
 }
@@ -522,6 +485,15 @@ header {
     background-color: #fff;
     padding-top: 10px;
     opacity: 1;
+}
+
+.logout-img{
+    max-height: 16px;
+    width: 16px;
+}
+
+.basket-img{
+    max-height: 24px;
 }
 
 .menu-shop a,
@@ -554,7 +526,7 @@ textarea {
     opacity: 0.6;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     word-wrap: normal;
     padding: 0 6px;
     transition: 0.5s all;
@@ -589,18 +561,22 @@ textarea {
     margin-bottom: 15px;
 }
 
+.name-content{
+    background-color: #ffffff;
+}
+
 .name-content h1,
 .title-lk h1 {
     color: #174040;
     font-size: 45px;
     font-family: "Ariq", serif;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 .name-content h1 {
     text-align: center;
-    padding: 25px 0;
+    padding: 75px 0 35px 0;
     margin: 0;
 }
 
@@ -661,7 +637,7 @@ textarea {
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 
@@ -900,7 +876,7 @@ textarea {
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     border: 0;
     flex: 0 0 auto;
 }
@@ -924,11 +900,15 @@ textarea {
     background-image: url(../img/mainBG.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 741px;
+    height: 745px;
 }
 
 .page {
     background: url(../img/BG.jpg) repeat;
+}
+
+#category:before{
+    margin: 1000px 0 0;
 }
 
 .menu-main-item {
@@ -965,7 +945,7 @@ textarea {
 .name-item h2 {
     font-family: "Ariq", serif;
     font-size: 24px;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
 }
 
 .menu-main-item p,
@@ -1028,7 +1008,7 @@ textarea {
     font-weight: 400;
     line-height: 15px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin: auto;
 }
 
@@ -1044,7 +1024,6 @@ textarea {
 .news-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     border-bottom: 1px dotted #65c6bb;
     padding: 30px 0;
     flex-wrap: wrap;
@@ -1071,14 +1050,13 @@ textarea {
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .name-news {
     padding-bottom: 8px;
 }
 
-.btn-readmore button,
 .name-news h3 {
     font-weight: 400;
     line-height: 30px;
@@ -1089,7 +1067,7 @@ textarea {
     color: #174040;
     font-family: "Ariq", serif;
     font-size: 18px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 .text-news p {
@@ -1106,21 +1084,6 @@ textarea {
 
 .text-news {
     max-width: 370px;
-}
-
-.btn-readmore {
-    padding-top: 20px;
-}
-
-.btn-readmore button {
-    color: #fff;
-    font-size: 13px;
-    letter-spacing: 4px;
-    width: 240px;
-    height: 55px;
-    border-radius: 28px;
-    background-color: #cc896f;
-    border: 0;
 }
 
 .container {
@@ -1155,7 +1118,7 @@ textarea {
     color: #fff;
     font-size: 12px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     border: 0;
 }
 
@@ -1186,7 +1149,7 @@ textarea {
 .delivery-cart h2 {
     color: #174040;
     font-size: 14px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-weight: 500;
 }
 
@@ -1267,7 +1230,7 @@ footer {
     color: #174040;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 .btn-place,
@@ -1470,7 +1433,7 @@ footer {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
-    letter-spacing: 9px;
+    letter-spacing: 2px;
     font-family: "Ariq", serif;
 }
 
@@ -1486,7 +1449,7 @@ footer {
 .popup-item h3 {
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     padding-top: 30px;
 }
 
@@ -1554,7 +1517,7 @@ footer {
 .goods-search{
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 55px;
 }
 
 input[value="SEARCH"]{
@@ -1586,6 +1549,44 @@ input[value="SEARCH"]{
 }
 
 .goods td{
-   max-width: 250px;
-   margin: auto;
+    max-width: 250px;
+    margin: auto;
+}
+
+input[type="submit"]{
+    width: 130px;
+    border-radius: 23px;
+    background-color: #65c6bb;
+    margin: 5px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.info h3{
+    font-weight: 400;
+}
+
+.map{
+    display: flex;
+}
+
+.info-name{
+    color: #eabb8c;
+    font-weight: 600;
+}
+
+.info-name:not(:first-child){
+    margin-top: 20px;
 }
