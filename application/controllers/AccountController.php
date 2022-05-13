@@ -17,7 +17,7 @@ class AccountController extends Controller
                 $password = $_POST['password'];
 
                 if (empty(trim($_POST["email"]))) {
-                    $err = "Please enter fields";
+                    $err = "Будь ласка, заповніть усі поля";
                 } else {
                     $users = User::getByLogin($email, $password);
                     $name = User::NameByEmail($email);
@@ -25,12 +25,12 @@ class AccountController extends Controller
                         $_SESSION['logged_user'] = $name -> name;
                         header('Location: /');
                     } else {
-                        $err = 'Invalid password or email';
+                        $err = 'Невірний пароль або електронна адреса';
                     }
                 }
             }
         }
-        $this->view->render('Вход', compact("err"));
+        $this->view->render('Вхід', compact("err"));
     }
 
     public function registrationAction()
@@ -43,22 +43,22 @@ class AccountController extends Controller
                 $accpassword = ($_POST['accpassword']);
 
                 if ($accpassword != $password) {
-                    $err = 'Password not identical';
+                    $err = 'Паролі не ідентичний';
                 } else {
                     $mail = User::getByEmail($email);
                     if ($mail->count == '1') {
-                        $err = 'Email already registered';
+                        $err = 'Електронна адреса вже зареєстрована';
                     } else {
                         $add = User::AddUser($name, $email, $password);
                         header('Location: /');
                     }
                 }
             } else {
-                $err = 'Please enter fields';
+                $err = 'Будь ласка, заповніть усі поля';
             }
         }
 
-        $this->view->render('Регистрация', compact("err"));
+        $this->view->render('Регістрація', compact("err"));
     }
 
     public function logoutAction()

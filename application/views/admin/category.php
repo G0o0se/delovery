@@ -24,35 +24,31 @@
         <thead>
         <tr>
             <th>Назва</th>
-            <th>Ціна</th>
-            <th>Опис</th>
-            <th>Категорія</th>
             <th>Фото</th>
-            <th></th>
+            <th>Час приготування</th>
+            <th>URL</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <form action="goods" method="post">
                 <td><input name="name" class="input-form" placeholder="Введіть назву товару" type="text"/></td>
-                <td><input name="price" class="input-form" type="number" placeholder="0" required min="0" value="0" step="5" title="Currency" pattern="^\d+(?:\.\d{1,2})?$"/></td>
-                <td><input name="description" class="input-form" placeholder="Введіть опис товару" type="text"/></td>
-                <td><input name="category" class="input-form" placeholder="Введіть ім'я категорії" type="text"/></td>
                 <td><input name="image" class="input-form" placeholder="Додайте фото" type="text"/></td>
+                <td><input name="time" class="input-form" type="number" placeholder="0" required min="0" value="0" step="5" title="Currency" pattern="^\d+(?:\.\d{1,2})?$"/></td>
+                <td><input name="url" class="input-form" placeholder="URL" type="text"/></td>
                 <td></td>
                 <td></td>
                 <td><button style="width: 150px;" name="add" type="submit" class="btn-send">Додати</button></td>
             </form>
         </tr>
         </tbody>
-        <?php foreach ($goods as $goods) : ?>
+        <?php foreach ($category as $category) : ?>
             <tr>
-                <?php $id = $goods->getId(); ?>
-                <td><?= $goods->getName() ?></td>
-                <td><?= $goods->getPrice() ?>₴</td>
-                <td><?= $goods->getDescription() ?></td>
-                <td><?= $goods->getCategory() ?></td>
-                <td><?= $goods->getImage() ?></td>
+                <?php $id = $category->getId(); ?>
+                <td><?= $category->getName() ?></td>
+                <td><?= $category->getImage() ?></td>
+                <td><?= $category->getCookTime() ?></td>
+                <td><?= $category->getUrl() ?></td>
                 <td></td>
                 <td>
                     <form action="/admin/goods/update" method='post'>

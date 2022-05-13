@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `delovery`.`categories` (
   `cookTime` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 9
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -43,21 +43,34 @@ CREATE TABLE IF NOT EXISTS `delovery`.`goods` (
   `description` VARCHAR(255) NOT NULL,
   `price` DOUBLE NOT NULL,
   `image` VARCHAR(255) NOT NULL,
-  `categories_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_goods_categories1_idx` (`categories_id` ASC) VISIBLE,
-  CONSTRAINT `fk_goods_categories1`
-    FOREIGN KEY (`categories_id`)
-    REFERENCES `delovery`.`categories` (`id`))
+  `category` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 30
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `delovery`.`user`
+-- Table `delovery`.`news`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delovery`.`user` (
+CREATE TABLE IF NOT EXISTS `delovery`.`news` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `date` DATETIME NULL DEFAULT NULL,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `description` TEXT NULL DEFAULT NULL,
+  `image` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 6
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `delovery`.`users`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `delovery`.`users` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) NOT NULL,
   `surname` VARCHAR(20) NOT NULL,
@@ -66,35 +79,35 @@ CREATE TABLE IF NOT EXISTS `delovery`.`user` (
   `id_admin` ENUM('0', '1') NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `delovery`.`order`
+-- Table `delovery`.`orders`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delovery`.`order` (
+CREATE TABLE IF NOT EXISTS `delovery`.`orders` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
-  `date` DATETIME NULL,
-  `price` DECIMAL NULL,
-  `quantity` DECIMAL NULL,
-  `status` VARCHAR(45) NULL,
+  `date` DATETIME NULL DEFAULT NULL,
+  `price` DECIMAL(10,0) NULL DEFAULT NULL,
+  `quantity` DECIMAL(10,0) NULL DEFAULT NULL,
+  `status` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_order_user_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_order_user`
     FOREIGN KEY (`user_id`)
-    REFERENCES `delovery`.`user` (`id`))
+    REFERENCES `delovery`.`users` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `delovery`.`order_details`
+-- Table `delovery`.`orders_details`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delovery`.`order_details` (
+CREATE TABLE IF NOT EXISTS `delovery`.`orders_details` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `goods_id` INT NOT NULL,
   `order_id` INT NOT NULL,
@@ -106,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `delovery`.`order_details` (
     REFERENCES `delovery`.`goods` (`id`),
   CONSTRAINT `fk_order_details_order1`
     FOREIGN KEY (`order_id`)
-    REFERENCES `delovery`.`order` (`id`))
+    REFERENCES `delovery`.`orders` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;

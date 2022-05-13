@@ -43,7 +43,27 @@ return [
 
     'admin/goods/update' => [
         'controller' => 'admin',
-        'action' => 'update',
+        'action' => 'goodUpdate',
+    ],
+
+    'admin/category' => [
+        'controller' => 'admin',
+        'action' => 'category',
+    ],
+
+    'admin/category/update' => [
+        'controller' => 'admin',
+        'action' => 'categoryUpdate',
+    ],
+
+    'admin/news' => [
+        'controller' => 'admin',
+        'action' => 'news',
+    ],
+
+    'admin/news/update' => [
+        'controller' => 'admin',
+        'action' => 'newsUpdate',
     ],
 
     'shop' => [
@@ -66,4 +86,8 @@ return [
         'action' => 'registration',
     ],
 
+    'contact' => [
+        'controller' => 'main',
+        'action' => 'contact',
+    ]
 ];
