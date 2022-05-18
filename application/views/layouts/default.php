@@ -12,7 +12,7 @@
 <header>
     <div class="content">
         <a class="logo" href="/">
-            <img alt="Logo" src="/public/img/logo.png">
+            <img alt="Logo" src="/public/img/system/logo.png">
         </a>
         <ul class="header-menu">
             <li class="item-menu"><a href="/#news">Новини</a></li>
@@ -24,22 +24,26 @@
                 <a href="/account/login">
                     <img alt="user icon" src="/public/img/icon/user.png">
                 </a>
-                    <?php
-                    if (isset($_SESSION['logged_user'])) {
-                        ?> <a href="/admin/goods"><p>  <?php echo $_SESSION['logged_user']; ?>  </p></a>
+                    <?php if (isset($_SESSION['user'])) { ?>
+                            <?php if ($_SESSION['user']['is_admin'] == '1') {?>
+                            <a href="/admin/goods">
+                                <p><?php echo $_SESSION['user']['name']?></p>
+                            </a>
+                        <?php } else {?>
+                            <a href="/shop">
+                                <p><?php echo $_SESSION['user']['name'];?></p>
+                            </a>
+                      <?php } ?>
                         <a href="/account/logout" title="Logout">
                             <img alt="" class="logout-img" src="/public/img/icon/logout.png">
                         </a>
-                        <?php
-                    } else {
+                    <?php } else {
                         ?> <a href="/account/login"><p> <?php echo 'Вхід';
-                    }
-                    ?> </p></a>
-                </a>
+                    } ?></p></a>
             </div>
             <div class="menu-user-item">
                 <?php
-                if (isset($_SESSION['logged_user'])) {
+                if (isset($_SESSION['user'])) {
                     ?>
                 <a href="/shop">
                     <?php
@@ -58,16 +62,3 @@
 <body>
 
 <?php echo $content; ?>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/public/js/popup.js" type="text/javascript"></script>
-
-<footer>
-    <ul class="footer-menu">
-        <li class="menu-item">© 2022. All you need. Food delivery</li>
-    </ul>
-</footer>
-
-</body>
-
-</html>

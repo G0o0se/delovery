@@ -6,7 +6,7 @@ use application\models\ActiveRecordEntity;
 
 class Good extends ActiveRecordEntity
 {
-    protected int $id;
+    public int $id;
     protected string $name;
     protected string $description;
     protected int $price;

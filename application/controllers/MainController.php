@@ -25,11 +25,6 @@ class MainController extends Controller
         $this->view->render('Страви - RockDelivery', ['goods' => $goods, 'category' => $categories]);
     }
 
-    public function shopAction()
-    {
-        $this->view->render('Кошик - RockDelivery');
-    }
-
     public function contactAction()
     {
         $this->view->render('Контакти - RockDelivery');

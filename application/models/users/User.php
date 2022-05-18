@@ -12,6 +12,8 @@ class User extends ActiveRecordEntity
     protected string $email;
     protected string $password;
     protected int $is_admin;
+    protected string $phone;
+    protected string $adress;
 
     public function getName(): string
     {
@@ -36,6 +38,16 @@ class User extends ActiveRecordEntity
     public function getAdmin(): string
     {
         return $this->is_admin;
+    }
+
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+    public function getAdress(): string
+    {
+        return $this->adress;
     }
 
     protected static function getTableName(): string

@@ -12,26 +12,38 @@
         <div class="form-auth">
            <div class="input-block">
                 <label>
-                    Ім'я та прізвище
-                    <input class="input-form" name="name" placeholder="Введіть своє ім’я та прізвище" type="text"/>
+                    Ім'я
+                    <input class="input-form" name="fname" placeholder="Введіть своє ім’я" required type="text"/>
+                </label>
+            </div>
+            <div class="input-block">
+                <label>
+                    Прізвище
+                    <input class="input-form" name="lname" placeholder="Введіть своє прізвище" required type="text"/>
                 </label>
             </div>
             <div class="input-block">
                 <label>
                     Електронна адреса
-                    <input class="input-form" name="email" placeholder="Введіть електронну адресу" type="email"/>
+                    <input class="input-form" name="email" placeholder="Введіть електронну адресу" required type="email"/>
+                </label>
+            </div>
+            <div class="input-block">
+                <label>
+                    Номер телефону
+                    <input class="input-form" name="number" placeholder="+380999999999" required type="tel"/>
                 </label>
             </div>
             <div class="input-block">
                 <label>
                     Пароль
-                    <input class="input-form" name="password" placeholder="***********" type="password"/>
+                    <input class="input-form" name="password" placeholder="***********" required type="password"/>
                 </label>
             </div>
             <div class="input-block">
                 <label>
                     Пароль
-                    <input class="input-form" name="accpassword" placeholder="***********" type="password"/>
+                    <input class="input-form" name="accpassword" placeholder="***********" required type="password"/>
                 </label>
             </div>
             <div class="accept-btn">
@@ -40,3 +52,15 @@
         </div>
     </form>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../public/js/main.js" type="text/javascript"></script>
+
+<footer>
+    <ul class="footer-menu">
+        <li class="menu-item">© 2022. All you need. Food delivery</li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
