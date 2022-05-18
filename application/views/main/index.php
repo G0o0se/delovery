@@ -10,7 +10,7 @@
         <?php foreach ($category as $categories) : ?>
             <a href="rest/<?=$categories->getUrl();?>">
                 <div class="food-main-item">
-                    <img alt="" class="img-item" src="../public/img/categories/<?= $categories->getImage() ?>">
+                    <img alt="" class="img-item" src="../public/img/<?= $categories->getImage() ?>">
                     <div class="item-main-info">
                         <div class="name-item">
                             <h2><?= $categories->getName() ?></h2>
@@ -31,7 +31,7 @@
                 <?php foreach (array_slice(array_reverse($news), 0, 3) as $lastnews) : ?>
                     <div class="news-item">
                         <div class="img-news">
-                            <img alt="salmon" src="/public/img/news/<?= $lastnews->getImage() ?>">
+                            <img width="175px" alt="" src="/public/img/<?= $lastnews->getImage() ?>">
                         </div>
                         <div class="info-news">
                             <div class="time-news">
@@ -49,3 +49,15 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../public/js/main.js" type="text/javascript"></script>
+
+<footer>
+    <ul class="footer-menu">
+        <li class="menu-item">© 2022. All you need. Food delivery</li>
+    </ul>
+</footer>
+
+</body>
+
+</html>

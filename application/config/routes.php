@@ -6,31 +6,6 @@ return [
         'action' => 'index',
     ],
 
-    'rest/dessert' => [
-        'controller' => 'main',
-        'action' => 'rest',
-    ],
-
-    'rest/grillmenu' => [
-        'controller' => 'main',
-        'action' => 'rest',
-    ],
-
-    'rest/soup' => [
-        'controller' => 'main',
-        'action' => 'rest',
-    ],
-
-    'rest/salad' => [
-        'controller' => 'main',
-        'action' => 'rest',
-    ],
-
-    'rest/pizza' => [
-        'controller' => 'main',
-        'action' => 'rest',
-    ],
-
     'rest/pasta' => [
         'controller' => 'main',
         'action' => 'rest',
@@ -43,7 +18,7 @@ return [
 
     'admin/goods/update' => [
         'controller' => 'admin',
-        'action' => 'goodUpdate',
+        'action' => 'goodsUpdate',
     ],
 
     'admin/category' => [
@@ -67,8 +42,38 @@ return [
     ],
 
     'shop' => [
-        'controller' => 'main',
+        'controller' => 'shop',
         'action' => 'shop',
+    ],
+
+    'shop/add' => [
+        'controller' => 'shop',
+        'action' => 'shopAdd',
+    ],
+
+    'shop/addAdress' => [
+        'controller' => 'shop',
+        'action' => 'shopAdress',
+    ],
+
+    'shop/plus' => [
+        'controller' => 'shop',
+        'action' => 'shopPlus',
+    ],
+
+    'shop/minus' => [
+        'controller' => 'shop',
+        'action' => 'shopMinus',
+    ],
+
+    'shop/delete' => [
+        'controller' => 'shop',
+        'action' => 'shopDelete',
+    ],
+
+    'shop/order' => [
+        'controller' => 'shop',
+        'action' => 'shopOrder',
     ],
 
     'account/login' => [
