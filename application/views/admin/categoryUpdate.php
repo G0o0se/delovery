@@ -7,6 +7,9 @@
             <a class="item-shop" href="/admin/goods">Страви</a>
         </li>
         <li>
+            <a class="item-shop" href="/admin/order">Замовлення</a>
+        </li>
+        <li>
             <a class="item-shop" href="/admin/news">Новини</a>
         </li>
     </ul>
@@ -28,7 +31,6 @@
 <?php endforeach; ?>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="../public/js/main.js" type="text/javascript"></script>
 
 <footer>
     <ul class="footer-menu">

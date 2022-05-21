@@ -5,6 +5,7 @@ namespace application\controllers;
 use application\core\Controller;
 use application\models\goods\Good;
 use application\models\orders\Order;
+use application\models\orders\OrderHasGoods;
 use application\models\users\User;
 
 
@@ -32,14 +33,23 @@ class ShopController extends Controller
 
     public function shopOrderAction(){
         $user_id = $_SESSION['user']['id'];
-        $products = json_encode($_SESSION['products']);
         $amount = $_SESSION['cart_coast'];
-        $status = 0;
+        $status = 'Замовленно';
         $date = date("Y-m-d-H-i-s");
         $payment = $_POST["payment"];
         $delivery = $_POST["delivery"];
 
-        Order::addOrder($user_id, $products, $amount, $status, $date, $payment, $delivery);
+        Order::addOrder($user_id, $amount, $status, $date, $payment, $delivery);
+
+        $order = Order::LastId();
+        foreach ($_SESSION['products'] as $key => $products)
+        {
+            $goods_id = $key;
+            $quantity = $_SESSION['products'][$key]['count'];
+            $order_id = $order->getId();
+            OrderHasGoods::addOrderHasGoods($order_id, $goods_id, $quantity);
+        }
+
         unset($_SESSION['products']);
         unset($_SESSION['cart_coast']);
         header('Location: /shop');
@@ -98,7 +108,7 @@ class ShopController extends Controller
 
     function remove_from_cart($product_id)
     {
-        unset($_SESSION['products']);
+        unset($_SESSION['products'][$product_id]);
         $this->update_cart();
     }
 
