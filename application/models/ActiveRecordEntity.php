@@ -39,6 +39,33 @@ abstract class ActiveRecordEntity
         return $db->query('SELECT * FROM `' . static::getTableName() . '`;', [], static::class);
     }
 
+    public static function findAllDESC(): array
+    {
+        $db = new Db();
+        return $db->query('SELECT * FROM `' . static::getTableName() . '`ORDER BY date_order DESC;', [], static::class);
+    }
+
+    public static function FindAllByID($id): array
+    {
+        $db = new Db();
+        return $db->query(
+            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, users.surname as usurname FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
+INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON orders.user_id=users.id WHERE orders.id=:id group by orders.id ORDER BY date_order DESC;',
+            [':id' => $id],
+            static::class
+        );
+    }
+
+    public static function FindAllID(): array
+    {
+        $db = new Db();
+        return $db->query(
+            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, users.surname as usurname, users.phone as phone FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
+INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON orders.user_id=users.id group by orders.id ORDER BY date_order DESC;',
+            [],
+            static::class
+        );
+    }
     public static function FindByCategory(string $category): array
     {
         $db = new Db();
@@ -203,12 +230,54 @@ abstract class ActiveRecordEntity
         );
     }
 
-    public static function addOrder(int $user_id, string $products, int $amount, int $status, string $date, string $payment, string $delivery): ?self
+    public static function updateOrder(string $status, string $payment, int $id): array
+    {
+        $db = new Db();
+        return $db->query(
+            'UPDATE orders SET status = :status, payment = :payment WHERE id = :id;',
+            [':status' => $status, ':payment' => $payment, ':id' => $id],
+            static::class
+        );
+    }
+
+    public static function updateDelivery(string $status, int $id): array
+    {
+        $db = new Db();
+        return $db->query(
+            'UPDATE orders SET status = :status WHERE id = :id;',
+            [':status' => $status, ':id' => $id],
+            static::class
+        );
+    }
+
+    public static function addOrder(int $user_id, int $amount, string $status, string $date, string $payment, string $delivery): ?self
     {
         $db = new Db();
         $entities = $db->query(
-            "INSERT INTO `" . static::getTableName() . "` (user_id, products, amount, status, date_order, payment, delivery) values (:user_id, :products, :amount, :status, :date, :payment, :delivery);",
-            [':user_id' => $user_id, ':products' => $products, ':amount' => $amount, ':status' => $status, ':date' => $date, ':payment' => $payment, ':delivery' => $delivery],
+            "INSERT INTO `" . static::getTableName() . "` (user_id, amount, status, date_order, payment, delivery) values (:user_id, :amount, :status, :date, :payment, :delivery);",
+            [':user_id' => $user_id, ':amount' => $amount, ':status' => $status, ':date' => $date, ':payment' => $payment, ':delivery' => $delivery],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function addOrderHasGoods(int $orders_id, int $goods_id, int $quantity): ?self
+    {
+        $db = new Db();
+        $entities = $db->query(
+            "INSERT INTO `" . static::getTableName() . "` (orders_id, goods_id, quantity) values (:orders_id, :goods_id, :quantity);",
+            [':orders_id' => $orders_id, ':goods_id' => $goods_id, 'quantity'=> $quantity],
+            static::class
+        );
+        return $entities ? $entities[0] : null;
+    }
+
+    public static function LastId(): ?self
+    {
+        $db = new Db();
+        $entities = $db->query(
+            "SELECT id FROM orders ORDER BY id DESC LIMIT 1",
+            [],
             static::class
         );
         return $entities ? $entities[0] : null;

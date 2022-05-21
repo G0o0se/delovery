@@ -183,6 +183,8 @@ header {
     width: 100%;
 }
 
+
+
 .menu-user-item {
     display: flex;
     justify-content: space-between;
@@ -207,6 +209,9 @@ header {
     font-size: 16px;
     font-weight: 400;
     margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 80px;
 }
 
 .menu-user-item p:hover {

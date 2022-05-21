@@ -26,19 +26,24 @@
                 </a>
                     <?php if (isset($_SESSION['user'])) { ?>
                             <?php if ($_SESSION['user']['is_admin'] == '1') {?>
-                            <a href="/admin/goods">
-                                <p><?php echo $_SESSION['user']['name']?></p>
+                            <a href="/admin/order">
+                                <p style="white-space: nowrap; overflow: hidden;max-width: 80px;"><?php echo $_SESSION['user']['name']?></p>
                             </a>
-                        <?php } else {?>
+                        <?php } elseif($_SESSION['user']['is_admin'] == '2') {?>
+                            <a href="/delivery/order">
+                                <p><?php echo $_SESSION['user']['name'];?></p>
+                            </a>
+                      <?php } else { ?>
                             <a href="/shop">
                                 <p><?php echo $_SESSION['user']['name'];?></p>
                             </a>
-                      <?php } ?>
+                    <?php } ?>
                         <a href="/account/logout" title="Logout">
                             <img alt="" class="logout-img" src="/public/img/icon/logout.png">
                         </a>
-                    <?php } else {
-                        ?> <a href="/account/login"><p> <?php echo 'Вхід';
+                <?php } else {
+                        ?>
+                <a href="/account/login"><p> <?php echo 'Вхід';
                     } ?></p></a>
             </div>
             <div class="menu-user-item">
