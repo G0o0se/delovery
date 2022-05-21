@@ -22,7 +22,6 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="../public/js/main.js" type="text/javascript"></script>
 
 <footer>
     <ul class="footer-menu">

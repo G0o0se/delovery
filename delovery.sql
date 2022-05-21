@@ -25,11 +25,10 @@ CREATE TABLE IF NOT EXISTS `delovery`.`categories` (
   `name` VARCHAR(50) NOT NULL,
   `url` VARCHAR(255) NOT NULL,
   `image` VARCHAR(255) NOT NULL,
-  `country` VARCHAR(50) NOT NULL,
   `cookTime` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 9
+AUTO_INCREMENT = 76
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -46,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `delovery`.`goods` (
   `category` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 30
+AUTO_INCREMENT = 44
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -62,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `delovery`.`news` (
   `image` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
+AUTO_INCREMENT = 17
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -72,16 +71,18 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `delovery`.`users` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(20) NOT NULL,
-  `surname` VARCHAR(20) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
-  `id_admin` ENUM('0', '1') NOT NULL,
+  `name` VARCHAR(20) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL,
+  `surname` VARCHAR(20) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL,
+  `email` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL,
+  `password` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL,
+  `id_admin` INT NOT NULL,
+  `phone` VARCHAR(45) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL,
+  `adress` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 19
 DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
+COLLATE = utf8mb4_0900_as_ci;
 
 
 -- -----------------------------------------------------
@@ -90,36 +91,46 @@ COLLATE = utf8mb4_0900_ai_ci;
 CREATE TABLE IF NOT EXISTS `delovery`.`orders` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
-  `date` DATETIME NULL DEFAULT NULL,
-  `price` DECIMAL(10,0) NULL DEFAULT NULL,
-  `quantity` DECIMAL(10,0) NULL DEFAULT NULL,
+  `products` JSON NULL DEFAULT NULL,
+  `amount` INT NULL DEFAULT NULL,
   `status` VARCHAR(45) NULL DEFAULT NULL,
+  `date_order` DATETIME NULL DEFAULT NULL,
+  `payment` VARCHAR(45) NULL DEFAULT NULL,
+  `delivery` VARCHAR(80) NULL DEFAULT NULL,
+  `users_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_order_user_idx` (`user_id` ASC) VISIBLE,
-  CONSTRAINT `fk_order_user`
-    FOREIGN KEY (`user_id`)
-    REFERENCES `delovery`.`users` (`id`))
+  INDEX `fk_orders_users1_idx` (`users_id` ASC) VISIBLE,
+  CONSTRAINT `fk_orders_users1`
+    FOREIGN KEY (`users_id`)
+    REFERENCES `delovery`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 23
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `delovery`.`orders_details`
+-- Table `delovery`.`orders_has_goods`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delovery`.`orders_details` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `delovery`.`orders_has_goods` (
+  `orders_id` INT NOT NULL,
   `goods_id` INT NOT NULL,
-  `order_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_order_details_goods1_idx` (`goods_id` ASC) VISIBLE,
-  INDEX `fk_order_details_order1_idx` (`order_id` ASC) VISIBLE,
-  CONSTRAINT `fk_order_details_goods1`
+  `quantity` INT NOT NULL,
+  PRIMARY KEY (`orders_id`, `goods_id`),
+  INDEX `fk_orders_has_goods_goods1_idx` (`goods_id` ASC) VISIBLE,
+  INDEX `fk_orders_has_goods_orders_idx` (`orders_id` ASC) VISIBLE,
+  CONSTRAINT `fk_orders_has_goods_orders`
+    FOREIGN KEY (`orders_id`)
+    REFERENCES `delovery`.`orders` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_orders_has_goods_goods1`
     FOREIGN KEY (`goods_id`)
-    REFERENCES `delovery`.`goods` (`id`),
-  CONSTRAINT `fk_order_details_order1`
-    FOREIGN KEY (`order_id`)
-    REFERENCES `delovery`.`orders` (`id`))
+    REFERENCES `delovery`.`goods` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;

@@ -6,14 +6,14 @@ use application\models\ActiveRecordEntity;
 
 class Order extends ActiveRecordEntity
 {
-    protected int $id;
-    protected int $user_id;
-    protected string $products;
-    protected int $amount;
-    protected string $status;
-    protected string $date;
-    protected string $payment;
-    protected string $delivery;
+    public int $id;
+    public int $user_id;
+    public string $products;
+    public int $amount;
+    public string $status;
+    public string $date_order;
+    public string $payment;
+    public string $delivery;
 
     public function getId(): int
     {
@@ -42,7 +42,7 @@ class Order extends ActiveRecordEntity
 
     public function getDate(): string
     {
-        return $this->date;
+        return $this->date_order;
     }
 
     public function getPayment(): string

@@ -31,6 +31,16 @@ return [
         'action' => 'categoryUpdate',
     ],
 
+    'admin/order' => [
+        'controller' => 'admin',
+        'action' => 'order',
+    ],
+
+    'admin/order/update' => [
+        'controller' => 'admin',
+        'action' => 'orderUpdate',
+    ],
+
     'admin/news' => [
         'controller' => 'admin',
         'action' => 'news',
@@ -39,6 +49,16 @@ return [
     'admin/news/update' => [
         'controller' => 'admin',
         'action' => 'newsUpdate',
+    ],
+
+    'delivery/order' => [
+        'controller' => 'delivery',
+        'action' => 'delivery',
+    ],
+
+    'delivery/order/update' => [
+        'controller' => 'delivery',
+        'action' => 'deliveryUpdate',
     ],
 
     'shop' => [
