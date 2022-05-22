@@ -32,7 +32,7 @@
             </select> <br>
             <input type="hidden" name="MAX_FILE_SIZE" value="30000000"/>
             <b>Фото</b>: <input name="image" class="input-form" type="file" multiple accept="image/jpeg,image/png"/> <br>
-            <input class="input-form" type="hidden" name='imagedefault' value='<?= $categories->getImage() ?>'/><br><br>
+            <input class="input-form" type="hidden" name='imagedefault' value='<?= $goods->getImage() ?>'/><br><br>
             <button name="editing" type="submit" class="btn-send">Змінити</button>
         </form>
     </div>

@@ -42,7 +42,7 @@ abstract class ActiveRecordEntity
     public static function findAllDESC(): array
     {
         $db = new Db();
-        return $db->query('SELECT * FROM `' . static::getTableName() . '`ORDER BY date_order DESC;', [], static::class);
+        return $db->query('SELECT * FROM `' . static::getTableName() . '`ORDER BY date DESC;', [], static::class);
     }
 
     public static function FindAllByID($id): array

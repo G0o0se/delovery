@@ -138,8 +138,6 @@ class AdminController extends Controller
             }
 
             if (isset($_POST["add"])) {
-
-
                 if (strpos(file_get_contents("$file"), "/" . "$url" . "'")) {
                 } else {
                     $data = "    'rest/" . $url . "' => [
@@ -229,7 +227,7 @@ class AdminController extends Controller
                 $search_q = $_POST['search_q'];
                 $news = News::searchNews($search_q);
             } else {
-                $news = News::findAll();
+                $news = News::findAllDESC();
             }
 
             $name = $_POST['name'];

@@ -486,7 +486,7 @@ header {
     background-color: #fff;
     padding-top: 10px;
     opacity: 1;
-}
+    z-index: 1;}
 
 .logout-img{
     max-height: 16px;
