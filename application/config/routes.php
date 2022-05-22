@@ -6,6 +6,41 @@ return [
         'action' => 'index',
     ],
 
+    'rest/dessert' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/salad' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/grillmenu' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/pizza' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/soup' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/ФЦІУВА' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
+    'rest/ІВА' => [
+        'controller' => 'main',
+        'action' => 'rest',
+    ],
+
     'rest/pasta' => [
         'controller' => 'main',
         'action' => 'rest',
