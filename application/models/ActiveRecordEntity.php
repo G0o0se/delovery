@@ -49,7 +49,7 @@ abstract class ActiveRecordEntity
     {
         $db = new Db();
         return $db->query(
-            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, users.surname as usurname FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
+            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, delivery_name as dname, users.surname as usurname FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
 INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON orders.user_id=users.id WHERE orders.id=:id group by orders.id ORDER BY date_order DESC;',
             [':id' => $id],
             static::class
@@ -60,12 +60,24 @@ INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON 
     {
         $db = new Db();
         return $db->query(
-            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, users.surname as usurname, users.phone as phone FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
+            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, delivery_name as dname, users.name as uname, users.surname as usurname, users.phone as phone FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
 INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON orders.user_id=users.id group by orders.id ORDER BY date_order DESC;',
             [],
             static::class
         );
     }
+
+    public static function FindAllbyName($name): array
+    {
+        $db = new Db();
+        return $db->query(
+            'SELECT group_concat(distinct goods.name) as gname, orders.id as id, group_concat(quantity) as quantity, amount as amount, status as status, date_order as date, payment as payment, delivery as delivery, users.name as uname, users.surname as usurname, users.phone as phone FROM goods INNER JOIN orders_has_goods ON goods.id = orders_has_goods.goods_id
+INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON orders.user_id=users.id WHERE orders.delivery_name=:name group by orders.id ORDER BY date_order DESC;',
+            [':name' => $name],
+            static::class
+        );
+    }
+
     public static function FindByCategory(string $category): array
     {
         $db = new Db();
@@ -74,6 +86,12 @@ INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON 
             [':category' => $category],
             static::class
         );
+    }
+
+    public static function findAllDname($id): array
+    {
+        $db = new Db();
+        return $db->query('SELECT name FROM `' . static::getTableName() . '` WHERE id_admin=:id;', [':id' => $id], static::class);
     }
 
     public static function NameByEmail(string $email): ?self
@@ -230,12 +248,12 @@ INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON 
         );
     }
 
-    public static function updateOrder(string $status, string $payment, int $id): array
+    public static function updateOrder(string $status, string $payment, string $delivery_name, int $id): array
     {
         $db = new Db();
         return $db->query(
-            'UPDATE orders SET status = :status, payment = :payment WHERE id = :id;',
-            [':status' => $status, ':payment' => $payment, ':id' => $id],
+            'UPDATE orders SET status = :status, payment = :payment, delivery_name = :delivery_name WHERE id = :id;',
+            [':status' => $status, ':payment' => $payment, ':delivery_name' => $delivery_name, ':id' => $id],
             static::class
         );
     }
@@ -250,12 +268,12 @@ INNER JOIN orders ON orders_has_goods.orders_id = orders.id INNER JOIN users ON 
         );
     }
 
-    public static function addOrder(int $user_id, int $amount, string $status, string $date, string $payment, string $delivery): ?self
+    public static function addOrder(int $user_id, int $amount, string $status, string $date, string $payment, string $delivery, string $delivery_name): ?self
     {
         $db = new Db();
         $entities = $db->query(
-            "INSERT INTO `" . static::getTableName() . "` (user_id, amount, status, date_order, payment, delivery) values (:user_id, :amount, :status, :date, :payment, :delivery);",
-            [':user_id' => $user_id, ':amount' => $amount, ':status' => $status, ':date' => $date, ':payment' => $payment, ':delivery' => $delivery],
+            "INSERT INTO `" . static::getTableName() . "` (user_id, amount, status, date_order, payment, delivery, delivery_name) values (:user_id, :amount, :status, :date, :payment, :delivery, :delivery_name);",
+            [':user_id' => $user_id, ':amount' => $amount, ':status' => $status, ':date' => $date, ':payment' => $payment, ':delivery' => $delivery, ':delivery_name' => $delivery_name],
             static::class
         );
         return $entities ? $entities[0] : null;

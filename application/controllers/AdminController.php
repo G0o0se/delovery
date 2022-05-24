@@ -8,6 +8,7 @@ use application\models\goods\Good;
 use application\models\news\News;
 use application\models\orders\Order;
 use application\models\orders\OrderHasGoods;
+use application\models\users\User;
 use PHP_CodeSniffer\Util\Cache;
 
 class AdminController extends Controller
@@ -307,19 +308,23 @@ class AdminController extends Controller
         if ($_SESSION['user']['is_admin'] == '1') {
             if (isset($_POST["edit"])) {
                 $id = $_POST["edit"];
+                $idd = 2;
                 $order = Order::FindAllByID($id);
+                $user = User::findAllDname($idd);
+
             }
 
             if (isset($_POST["editing"])) {
                 $id = $_POST["editing"];
                 $status = $_POST['status'];
                 $payment = $_POST['payment'];
+                $dname = $_POST['dname'];
 
-                Order::updateOrder($status, $payment, $id);
+                Order::updateOrder($status, $payment, $dname, $id);
                 header('Location: /admin/order');
             }
 
-            $this->view->render('Адмін панель', ['order' => $order]);
+            $this->view->render('Адмін панель', ['order' => $order, 'user' => $user]);
         } else {
             header('Location: /');
         }

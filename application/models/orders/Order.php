@@ -14,6 +14,7 @@ class Order extends ActiveRecordEntity
     public string $date_order;
     public string $payment;
     public string $delivery;
+    public string $delivery_name;
 
     public function getId(): int
     {
@@ -54,6 +55,12 @@ class Order extends ActiveRecordEntity
     {
         return $this->delivery;
     }
+
+    public function getDeliveryName(): string
+    {
+        return $this->delivery_name;
+    }
+
 
     protected static function getTableName(): string
     {

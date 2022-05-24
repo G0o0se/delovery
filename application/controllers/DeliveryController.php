@@ -11,7 +11,8 @@ class DeliveryController extends Controller
     public function deliveryAction()
     {
         if ($_SESSION['user']['is_admin'] == '2') {
-            $order = Order::FindAllID();
+            $name = $_SESSION['user']['name'];
+            $order = Order::FindAllbyName($name);
             $this->view->render('Панель кур\'єра', ['order' => $order]);
         } else {
             header('Location: /');
