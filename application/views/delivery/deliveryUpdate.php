@@ -29,9 +29,6 @@
                     <td>
                         <select name="status" class="input-form" style="height: 29px;color: grey;font-size: 13px">
                             <option value="<?= $order->status ?>" selected>Aкт. статус: <?= $order->status ?></option>
-                            <option value="Замовлено">Замовлено</option>
-                            <option value="Підтвердженно">Підтвердженно</option>
-                            <option value="Готується">Готується</option>
                             <option value="Доставляється">Доставляється</option>
                             <option value="Виконано">Виконано</option>
                         </select>

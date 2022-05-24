@@ -38,8 +38,9 @@ class ShopController extends Controller
         $date = date("Y-m-d-H-i-s");
         $payment = $_POST["payment"];
         $delivery = $_POST["delivery"];
+        $delivery_name = '';
 
-        Order::addOrder($user_id, $amount, $status, $date, $payment, $delivery);
+        Order::addOrder($user_id, $amount, $status, $date, $payment, $delivery, $delivery_name);
 
         $order = Order::LastId();
         foreach ($_SESSION['products'] as $key => $products)

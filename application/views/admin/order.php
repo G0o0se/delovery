@@ -27,6 +27,7 @@
             <th>Тип оплати</th>
             <th>Місце доставки</th>
             <th>Телефон</th>
+            <th>Ім'я кур'єра</th>
             <th></th>
         </tr>
         </thead>
@@ -42,6 +43,7 @@
                 <td><?= $order->payment ?></td>
                 <td><?= $order->delivery ?></td>
                 <td><?= $order->phone ?></td>
+                <td><?= $order->dname ?></td>
                 <td></td>
                 <td>
                     <form action="/admin/order/update" method='post'>
